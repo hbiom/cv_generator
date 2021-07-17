@@ -23,7 +23,6 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -45,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'compressor',
     'myproject',
+    'mycv'
 ]
 
 MIDDLEWARE = [
