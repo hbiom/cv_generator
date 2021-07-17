@@ -2,20 +2,21 @@
 # Create your models here.
 from django.db import models
 from django.contrib.auth.models import User
-
+import cloudinary
+from cloudinary.models import CloudinaryField
 
 class Profile(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE)
   first_name = models.CharField(max_length=80)
   last_name = models.CharField(max_length=80)
   title = models.CharField(max_length=80)
-  profile_pic = models.ImageField(upload_to='images/')
+  profile_pic = cloudinary.models.CloudinaryField('image')
   about_me =  models.TextField(max_length=800)
 
 class Experience(models.Model):
   job_name = models.CharField(max_length=100)
   company = models.CharField(max_length=100)
-  logo_company = models.ImageField(upload_to='images/')
+  logo_company = cloudinary.models.CloudinaryField('image')
   description =  models.TextField(max_length=800)
 
   start_date = models.DateField()
@@ -45,7 +46,7 @@ class Publication(models.Model):
 
 
 class Study(models.Model):
-  institut = models.ImageField(upload_to='images/')
+  institut = cloudinary.models.CloudinaryField('image')
   title = models.CharField(max_length=80)
   description =  models.TextField(max_length=800, null=True)
   obtention_date = models.DateField()

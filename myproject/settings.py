@@ -26,6 +26,11 @@ if os.path.isfile(dotenv_file):
 # Update secret key
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
+cloudinary.config(
+  cloud_name = str(os.getenv('CLOUD_NAME')),
+  api_key = str(os.getenv('API_KEY')),
+  api_secret = str(os.getenv('API_SECRET'))
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -46,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_seed',
     'cloudinary_storage',
     'cloudinary',
     'compressor',

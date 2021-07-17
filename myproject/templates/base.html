@@ -4,7 +4,6 @@
 {% load compress %}
 {% load cloudinary %}
 
-
 <!DOCTYPE html>
 
 <html>
@@ -14,13 +13,16 @@
         {% compress css %}
         <link rel="stylesheet" href="{% static 'style/main.scss' %}" type="text/x-scss" media="screen">
         {% endcompress %}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body class="{% block bodyclass %}{% endblock %}">
-        {% block content %}{% endblock %}
         {% include '_navbar.html' %}
+        {% block content %}{% endblock %}
         {% compress js %}
         <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
         {% endcompress %}
     </body>
+    {% include '_footer.html' %}
 </html>
