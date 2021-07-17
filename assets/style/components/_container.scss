@@ -1,0 +1,114 @@
+/*box*/
+
+.box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(200,200,200,0.5);
+}
+
+.subbox {
+  width: 70%;
+  margin: 20px auto;
+  padding:20px;
+  border-radius: 5px;
+  background-color: rgb(255,255,255);
+  color: black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.cart-info {
+  padding:0 20px;
+  width: 100%;
+}
+
+.cart-sub .cart-info {
+  padding-right: 20px;
+  width: 100%;
+}
+
+.cart-info ul,li {
+  line-height: 16px;
+}
+
+.cart-info a {
+    color: grey;
+}
+
+.cart-info a:hover {
+    color: black;
+}
+
+#publication {
+  width: 80%;
+  margin: auto;
+}
+
+#publication > div {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+
+.subbox:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.9);
+}
+
+
+/*list*/
+
+
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  background-color:white;
+  color: black;
+}
+
+.sublist {
+  width: 100%;
+  padding:10px;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.sublist a {
+  color: grey;
+}
+
+.sublist a:hover {
+  color:black;
+}
+
+#publication > div:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.competence h2 {
+  color: gray;
+  padding-left: 20px;
+}
+
+.competence-list {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .subbox {
+    display: block;
+    flex-direction: column;
+  }
+
+  .sublist {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list > sublist {
+    display: block;
+  }
+}

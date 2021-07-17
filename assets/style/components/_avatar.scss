@@ -1,0 +1,45 @@
+
+.div-avatar {
+  width: 400px;
+  text-align: center;
+  margin: auto 0;
+}
+
+.avatar {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo-square {
+  width:  100px;
+  background-size: cover;
+  margin-right: auto;
+  padding-left: 10px;
+}
+
+.logo-long {
+  width:  150px;
+  background-size: cover;
+}
+
+.div-logo {
+  width:20%;
+}
+
+.div-logo img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media (max-width: 960px){
+.div-logo {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+
+
+
