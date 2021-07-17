@@ -1,30 +1,45 @@
 
-
 {% extends 'base.html'%}
 
 {% load static %}
 {% block content %}
 
-  {% for profile in profiles %}
-  <div class = "font-page invisible">
-    <div>
-      <div class = div-avatar>
-        <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
-        <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
-      </div>
-      <div class= "div-text" >
-        <p> ABOUT <span> ME </span></p>
-        <br>
-        <p class = "text-center"> {{profile.about_me}} </p>
-      </div>
+
+
+{% for profile in profiles %}
+<div class = "font-page invisible">
+  <div>
+    <div class = div-avatar>
+      <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
+      <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
+    </div>
+    <div class= "div-text" >
+      <p> ABOUT <span> ME </span></p>
+      <br>
+      <p class = "text-center"> {{profile.about_me}} </p>
     </div>
   </div>
-  {% endfor %}
+</div>
+{% endfor %}
 
 
-  {% for experience in experiences %}
-    <p>{{experience.job_name}}</p>
-  {% endfor %}
+{% for experience in experiences %}
+  <div class="list" id="experience">
+    <h1 class="title">Experience</h1>
+    <div class="sublist display-flex invisible">
+      <div class = "div-logo">
+        <img src="{{experience.profile_pic.url}}" alt="{{experience.job_name}}" class = "logo-long">
+        <p class ="date">{{experience.logo_company.url}}</p>
+      </div>
+      <div class = "cart-info">
+        <h2>{{experience.job_name}}</h2>
+        <h3>{{experience.company}}</h3>
+        <p>{{experience.description}}</p>
+      </div>
+    </div>
+    <hr>
+  </div>
+{% endfor %}
 
 
 {% endblock %}

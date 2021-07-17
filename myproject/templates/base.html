@@ -18,7 +18,7 @@
 
     <body class="{% block bodyclass %}{% endblock %}">
         {% block content %}{% endblock %}
-
+        {% include '_navbar.html' %}
         {% compress js %}
         <script type="text/javascript" src="{% static 'script/app.js' %}"></script>
         {% endcompress %}
