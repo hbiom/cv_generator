@@ -23,23 +23,24 @@
 {% endfor %}
 
 
-{% for experience in experiences %}
+
   <div class="list" id="experience">
     <h1 class="title">Experience</h1>
-    <div class="sublist display-flex invisible">
-      <div class = "div-logo">
-        <img src="{{experience.profile_pic.url}}" alt="{{experience.job_name}}" class = "logo-long">
-        <p class ="date">{{experience.logo_company.url}}</p>
+    {% for experience in experiences %}
+      <div class="sublist display-flex invisible">
+        <div class = "div-logo">
+          <img src="{{experience.logo_company.url}}" alt="{{experience.job_name}}" class = "logo-long">
+          <p class ="date">{{experience.start_date}}-{{experience.end_date}}</p>
+        </div>
+        <div class = "cart-info">
+          <h2>{{experience.job_name}}</h2>
+          <h3>{{experience.company}}</h3>
+          <p>{{experience.description}}</p>
+        </div>
       </div>
-      <div class = "cart-info">
-        <h2>{{experience.job_name}}</h2>
-        <h3>{{experience.company}}</h3>
-        <p>{{experience.description}}</p>
-      </div>
-    </div>
-    <hr>
+      <hr>
+    {% endfor %}
   </div>
-{% endfor %}
 
 
 {% endblock %}
