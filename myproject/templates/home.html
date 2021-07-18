@@ -43,7 +43,17 @@
   </div>
 
 
+  {% for skill in skills %}
+    <div class="box" id="competence">
+      <h1 class="title"> Skill </h1>
+      <div>
+        <div class="subbox invisible">
+          <h2>{{skill.category.category_name}}</h2>
+          <div class="competence-list">
+            {{skill.name}}
+          </div>
+        </div>
+
+  {% endfor %}
+
 {% endblock %}
-
-
-

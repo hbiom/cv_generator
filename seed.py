@@ -20,7 +20,10 @@ from django.contrib.auth.models import User
 
 Profile.objects.all().delete()
 Experience.objects.all().delete()
+Skill.objects.all().delete()
+SkillCategory.objects.all().delete()
 
+print("db deleted")
 
 profile_test = "Im a Life scientist passionate about the intersections of Healthcare and Data science and programming. During my thesis, I performed statistical and data visualization analysis on clinical and biological data (transcriptomic, flow cytometry) resulting in several scientific publications and oral presentations in international conferences. I also worked on machine learning projects applied to medical images and radiomics for classification and segmentation tasks. I have experience in back-end development (Python, SQL, Flask, Django) and front-end interface (HTML, CSS, JS).Im strongly motivated to work on projects aiming to have an impact on healthcare and clinical practice."
 
@@ -42,7 +45,7 @@ def seed():
   description =  profile_test,
   start_date = '2019-09-02',
   end_date = '2021-09-02',
-  User = hugo
+  user = hugo
   )
 
   Experience.objects.create(
@@ -52,12 +55,30 @@ def seed():
   description =  profile_test,
   start_date = '2019-09-02',
   end_date = '2021-09-02',
-  User = hugo
+  user = hugo
   )
 
+  programing = SkillCategory.objects.create(category_name="Programming",user=hugo)
+  projet = SkillCategory.objects.create(category_name="Project",user=hugo)
+  langue = SkillCategory.objects.create(category_name="Language",user=hugo)
 
+  Skill.objects.create(name="Python",category=programing)
+  Skill.objects.create(name="HTML",category=programing)
+  Skill.objects.create(name="CSS",category=programing)
+  Skill.objects.create(name="Javascript",category=programing)
+  Skill.objects.create(name="Django",category=programing)
+  Skill.objects.create(name="Flask",category=programing)
+
+  Skill.objects.create(name="Project Managment",category=projet)
+  Skill.objects.create(name="Trello",category=projet)
+  Skill.objects.create(name="Communication",category=projet)
+
+  Skill.objects.create(name="English",category=langue)
+  Skill.objects.create(name="French",category=langue)
+  Skill.objects.create(name="Portuguese",category=langue)
 
   print("done")
 
 
 seed()
+

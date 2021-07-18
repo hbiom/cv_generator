@@ -22,12 +22,12 @@ class Experience(models.Model):
   start_date = models.DateField()
   end_date = models.DateField()
 
-  User = models.ForeignKey(User, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class SkillCategory(models.Model):
-  category = models.CharField(max_length=150)
-  User = models.ForeignKey(User, on_delete=models.CASCADE)
+  category_name = models.CharField(max_length=150)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class Skill(models.Model):
