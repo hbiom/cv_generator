@@ -43,25 +43,25 @@
 </div>
 
 
-{% for skill in skills %}
   <div class="box" id="competence">
     <h1 class="title"> Skill </h1>
-    <div>
-      <div class="subbox invisible">
-        <h2>{{skill.category.category_name}}</h2>
-        <div class="competence-list">
-          <ul>
-            <li><span>Machine learning</span>: Python, Numpy, Sklearn, Tensorflow, Keras </li>
-            <li><span>Data visualization</span>: Seaborn, Matplotlib, Chart.js </li>
-            <li><span>Web development</span>: Django, Flask, HTML/CSS, Javascript</li>
-            <li><span>Database</span>: SQL, postgress</li>
-            <li><span>Software</span>: git, github</li>
-          </ul>
+    {% for skillCategorie in skillCategories %}
+      <div>
+        <div class="subbox invisible">
+          <h2>{{skillCategorie.category_name}}</h2>
+          <div class="competence-list">
+            <ul>
+              <li><span>Machine learning</span>: Python, Numpy, Sklearn, Tensorflow, Keras </li>
+              <li><span>Data visualization</span>: Seaborn, Matplotlib, Chart.js </li>
+              <li><span>Web development</span>: Django, Flask, HTML/CSS, Javascript</li>
+              <li><span>Database</span>: SQL, postgress</li>
+              <li><span>Software</span>: git, github</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
   </div>
-{% endfor %}
 
 
 
