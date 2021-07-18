@@ -9,7 +9,7 @@ def home(request):
   publications = Publication.objects.all()
   studies = Study.objects.all()
 
-  return render(request, 'home.html',{'experiences':experiences,"profiles":profiles,"skillcategories":skillcategories,'skills':skills})
+  return render(request, 'home.html',{'experiences':experiences,"profiles":profiles,"skillcategories":skillcategories,'skills':skills,'publications':publications})
 
 
 

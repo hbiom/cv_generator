@@ -67,12 +67,12 @@ def seed():
   ML = Subcategory.objects.create(subcategory_name="Machine learning")
   Web = Subcategory.objects.create(subcategory_name="Web")
 
-  Skill.objects.create(name="Python",category=programing,Subcategory=ML)
-  Skill.objects.create(name="HTML",category=programing,Subcategory=ML)
-  Skill.objects.create(name="CSS",category=programing,Subcategory=Web)
-  Skill.objects.create(name="Javascript",category=programing,Subcategory=Web)
-  Skill.objects.create(name="Django",category=programing,Subcategory=Web)
-  Skill.objects.create(name="Flask",category=programing,Subcategory=Web)
+  Skill.objects.create(name="Python",category=programing,subcategory=ML)
+  Skill.objects.create(name="HTML",category=programing,subcategory=ML)
+  Skill.objects.create(name="CSS",category=programing,subcategory=Web)
+  Skill.objects.create(name="Javascript",category=programing,subcategory=Web)
+  Skill.objects.create(name="Django",category=programing,subcategory=Web)
+  Skill.objects.create(name="Flask",category=programing,subcategory=Web)
 
   Skill.objects.create(name="Project Managment",category=projet)
   Skill.objects.create(name="Trello",category=projet)
@@ -82,8 +82,25 @@ def seed():
   Skill.objects.create(name="French",category=langue)
   Skill.objects.create(name="Portuguese",category=langue)
 
-  print("done")
+  Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
+                             journal_name="Thesis",
+                             publication_link="http://www.theses.fr/2019USPCC012",
+                             author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
+                             publication_date='2019-04-02')
+
+  Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
+                             journal_name="Thesis",
+                             publication_link="http://www.theses.fr/2019USPCC012",
+                             author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
+                             publication_date='2019-04-02')
+
+  Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
+                             journal_name="Thesis",
+                             publication_link="http://www.theses.fr/2019USPCC012",
+                             author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
+                             publication_date='2019-04-02')
+
+  print("seeding done")
 
 
 seed()
-

@@ -1,6 +1,5 @@
 
 {% extends 'base.html'%}
-
 {% load static %}
 {% block content %}
 
@@ -65,5 +64,17 @@
     {% endfor %}
   </div>
 
+  <div class="list" id="publication">
+    <h1 class="title">Publication</h1>
+    {% for publication in publications %}
+    <div class = "sublist invisible">
+      <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
+      <p>{{publication.publication_date}}</p>
+      <p><b>Author</b>: {{publication.author}}</p>
+    </div>
+    {% endfor %}
+  </div>
 
 {% endblock %}
+
+
