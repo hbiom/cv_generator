@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 import cloudinary
 from cloudinary.models import CloudinaryField
 
+
 class Profile(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE)
   first_name = models.CharField(max_length=80)
@@ -40,6 +41,8 @@ class Publication(models.Model):
   author =  models.TextField(max_length=800)
   abstract =  models.TextField(max_length=800, null=True)
   publication_date = models.DateField()
+
+
 
 class Study(models.Model):
   institut = cloudinary.models.CloudinaryField('image')

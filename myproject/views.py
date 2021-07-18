@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from mycv.models import *
 
+
+
 def home(request):
   profiles = Profile.objects.all()
   experiences = Experience.objects.all()
