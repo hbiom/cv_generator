@@ -27,6 +27,7 @@ class Experience(models.Model):
 
 class SkillCategory(models.Model):
   category_name = models.CharField(max_length=150)
+  # sub_category = models.CharField(max_length=150)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
