@@ -45,32 +45,25 @@
 
   <div class="box" id="competence">
     <h1 class="title"> Skill </h1>
-    {% for skillCategorie in skillCategories %}
+    {% for skillcategorie in skillcategories %}
       <div>
         <div class="subbox invisible">
-          <h2>{{skillCategorie.category_name}}</h2>
+          <h2>{{skillcategorie.category_name}}</h2>
           <div class="competence-list">
-            <ul>
-              <li><span>Machine learning</span>: Python, Numpy, Sklearn, Tensorflow, Keras </li>
-              <li><span>Data visualization</span>: Seaborn, Matplotlib, Chart.js </li>
-              <li><span>Web development</span>: Django, Flask, HTML/CSS, Javascript</li>
-              <li><span>Database</span>: SQL, postgress</li>
-              <li><span>Software</span>: git, github</li>
-            </ul>
+            {% for skill in skillcategorie.skill_set.all %}
+              <ul>
+                  {% if skill.Subcategory %}
+                    <li><span>{{skill.Subcategory.subcategory_name}}</span>: {{skill.name}} </li>
+                  {% else %}
+                    <li>{{skill.name}} </li>
+                  {% endif %}
+              </ul>
+            {% endfor %}
           </div>
         </div>
       </div>
     {% endfor %}
   </div>
-
-
-
-
-
-
-
-
-
 
 
 {% endblock %}

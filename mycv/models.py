@@ -25,16 +25,16 @@ class Experience(models.Model):
   user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
-class SkillCategory(models.Model):
+class Skillcategory(models.Model):
   category_name = models.CharField(max_length=150)
-  # sub_category = models.CharField(max_length=150)
-  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+class Subcategory(models.Model):
+  subcategory_name = models.CharField(max_length=150)
 
 class Skill(models.Model):
   name = models.CharField(max_length=150)
-  category = models.ForeignKey(SkillCategory, on_delete=models.CASCADE)
-
+  category = models.ForeignKey(Skillcategory, on_delete=models.CASCADE)
+  Subcategory = models.ForeignKey(Subcategory, blank=True, null=True, on_delete=models.CASCADE)
 
 class Publication(models.Model):
   title = models.CharField(max_length=80)

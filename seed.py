@@ -21,7 +21,8 @@ from django.contrib.auth.models import User
 Profile.objects.all().delete()
 Experience.objects.all().delete()
 Skill.objects.all().delete()
-SkillCategory.objects.all().delete()
+Skillcategory.objects.all().delete()
+Subcategory.objects.all().delete()
 
 print("db deleted")
 
@@ -58,16 +59,20 @@ def seed():
   user = hugo
   )
 
-  programing = SkillCategory.objects.create(category_name="Programming",user=hugo)
-  projet = SkillCategory.objects.create(category_name="Project",user=hugo)
-  langue = SkillCategory.objects.create(category_name="Language",user=hugo)
+  programing = Skillcategory.objects.create(category_name="Programming")
+  projet = Skillcategory.objects.create(category_name="Project")
+  langue = Skillcategory.objects.create(category_name="Language")
 
-  Skill.objects.create(name="Python",category=programing)
-  Skill.objects.create(name="HTML",category=programing)
-  Skill.objects.create(name="CSS",category=programing)
-  Skill.objects.create(name="Javascript",category=programing)
-  Skill.objects.create(name="Django",category=programing)
-  Skill.objects.create(name="Flask",category=programing)
+
+  ML = Subcategory.objects.create(subcategory_name="Machine learning")
+  Web = Subcategory.objects.create(subcategory_name="Web")
+
+  Skill.objects.create(name="Python",category=programing,Subcategory=ML)
+  Skill.objects.create(name="HTML",category=programing,Subcategory=ML)
+  Skill.objects.create(name="CSS",category=programing,Subcategory=Web)
+  Skill.objects.create(name="Javascript",category=programing,Subcategory=Web)
+  Skill.objects.create(name="Django",category=programing,Subcategory=Web)
+  Skill.objects.create(name="Flask",category=programing,Subcategory=Web)
 
   Skill.objects.create(name="Project Managment",category=projet)
   Skill.objects.create(name="Trello",category=projet)
