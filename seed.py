@@ -85,19 +85,19 @@ def seed():
   Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
                              journal_name="Thesis",
                              publication_link="http://www.theses.fr/2019USPCC012",
-                             author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
+                             author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Bottois Hugo, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
                              publication_date='2019-04-02')
 
   Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
                              journal_name="Thesis",
                              publication_link="http://www.theses.fr/2019USPCC012",
-                             author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
+                             author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Bottois Hugo, Matthieu Allez",
                              publication_date='2019-04-02')
 
   Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
                              journal_name="Thesis",
                              publication_link="http://www.theses.fr/2019USPCC012",
-                             author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
+                             author="Anne Caignard, Stéphane Nancey, Bottois Hugo, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
                              publication_date='2019-04-02')
 
   print("seeding done")
