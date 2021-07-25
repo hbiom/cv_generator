@@ -112,7 +112,22 @@ span {
   background: white;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
   border-radius: 4px;
-  margin: 8px;
   border: 2px solid #1EDD88;
+  margin: 0px 8px 8px 8px;
 }
 
+.skillset {
+  display:flex;
+  margin-top: 15px;
+}
+
+.subcategorie {
+  display:flex;
+  width:20%;
+}
+
+.skills {
+  display:flex;
+  width:80%;
+  flex-wrap: wrap;
+}

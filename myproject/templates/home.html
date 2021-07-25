@@ -22,15 +22,13 @@
   </div>
 {% endfor %}
 
-
-
 <div class="list" id="experience">
   <h1 class="title">Experience</h1>
   {% for experience in experiences %}
     <div class="sublist display-flex invisible">
       <div class = "div-logo">
         <img src="{{experience.logo_company.url}}" alt="{{experience.job_name}}" class = "logo-long">
-        <p class ="date">{{experience.start_date}}-{{experience.end_date}}</p>
+        <p class ="date">{{experience.start_date|date:'Y'}}-{{experience.end_date|date:'Y'}}</p>
       </div>
       <div class = "cart-info">
         <h2>{{experience.job_name}}</h2>
@@ -38,7 +36,9 @@
         <p>{{experience.description}}</p>
       </div>
     </div>
-    <hr>
+    {% if forloop.counter != experiences|length  %}
+      <hr>
+    {% endif %}
   {% endfor %}
 </div>
 
@@ -55,14 +55,19 @@
                 <li><span>{{key}} </li>
               </ul>
             {% else %}
-              <ul>
-                <li>
-                  <span>{{key}}:</span>
+              <div class="skillset">
+                <div class="subcategorie">
+                  <span>{{key}} :</span>
+                </div>
+                <div class="skills">
                   {% for value in values %}
                     <span class="skill">{{value}}</span>
                   {% endfor %}
-                </li>
-              </ul>
+                </div>
+              </div>
+              {% if forloop.counter != skills|length  %}
+                <hr>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </div>
@@ -77,7 +82,7 @@
   {% for publication in publications %}
   <div class = "sublist invisible">
     <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
-    <p>{{publication.publication_date}}</p>
+    <p>{{publication.publication_date|date:'M d, Y'}}</p>
     <p><b>Author</b>: {{ publication.author | spotme:"Bottois Hugo" }}</p>
   </div>
   {% endfor %}
