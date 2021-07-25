@@ -7,19 +7,19 @@
 
 
 {% for profile in profiles %}
-<div class = "font-page invisible">
-  <div>
-    <div class = div-avatar>
-      <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
-      <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
-    </div>
-    <div class= "div-text" >
-      <p> ABOUT <span> ME </span></p>
-      <br>
-      <p class = "text-center"> {{profile.about_me}} </p>
+  <div class = "font-page invisible">
+    <div>
+      <div class = div-avatar>
+        <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
+        <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
+      </div>
+      <div class= "div-text" >
+        <p> ABOUT <span> ME </span></p>
+        <br>
+        <p class = "text-center"> {{profile.about_me}} </p>
+      </div>
     </div>
   </div>
-</div>
 {% endfor %}
 
 
@@ -42,59 +42,45 @@
   {% endfor %}
 </div>
 
-
-<!--   <div class="box" id="competence">
-    <h1 class="title"> Skill </h1>
-    {% for skillcategorie in skillcategories %}
-      <div>
-        <div class="subbox invisible">
-          <h2>{{skillcategorie.category_name}}</h2>
-          <div class="competence-list">
-            {% for skill in skillcategorie.skill_set.all %}
+<div class="box" id="competence">
+  <h1 class="title"> Skill </h1>
+  {% for skillcategorie, skills in skills_dico.items %}
+    <div>
+      <div class="subbox invisible">
+        <h2>{{skillcategorie}}</h2>
+        <div class="competence-list">
+          {% for key, values in skills.items %}
+            {% if key == values %}
               <ul>
-                {% if skill.subcategory is null or blank %}
-                  <li>{{skill.name}} </li>
-                {% else %}
-                  <li><span>{{skill.subcategory.subcategory_name}}</span>: {{skill.name}} </li>
-                {% endif %}
+                <li><span>{{key}} </li>
               </ul>
-            {% endfor %}
-          </div>
+            {% else %}
+              <ul>
+                <li>
+                  <span>{{key}}:</span>
+                  {% for value in values %}
+                    <span class="skill"> {{value}} </span>
+                  {% endfor %}
+                </li>
+              </ul>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
-    {% endfor %}
-  </div> -->
-
-  <div class="box" id="competence">
-    <h1 class="title"> Skill </h1>
-    {% for skillcategorie, skills in skills_dico.items %}
-      <div>
-        <div class="subbox invisible">
-          <h2>{{skillcategorie}}</h2>
-          <div class="competence-list">
-            {% for key, value in skills.items %}
-              <ul>
-                <li><span>{{key}}</span>: {{value}} </li>
-              </ul>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-
-{{skills_dico}}
-
-  <div class="list" id="publication">
-    <h1 class="title">Publication</h1>
-    {% for publication in publications %}
-    <div class = "sublist invisible">
-      <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
-      <p>{{publication.publication_date}}</p>
-      <p><b>Author</b>: {{ publication.author | spotme:"Bottois Hugo" }}</p>
     </div>
-    {% endfor %}
+  {% endfor %}
+</div>
+
+<div class="list" id="publication">
+  <h1 class="title">Publication</h1>
+  {% for publication in publications %}
+  <div class = "sublist invisible">
+    <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
+    <p>{{publication.publication_date}}</p>
+    <p><b>Author</b>: {{ publication.author | spotme:"Bottois Hugo" }}</p>
   </div>
+  {% endfor %}
+</div>
 
 {% endblock %}
 
