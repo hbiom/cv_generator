@@ -5,7 +5,6 @@ register = template.Library()
 
 
 
-
 def spotme(author, me):
   '''
   me is a single name

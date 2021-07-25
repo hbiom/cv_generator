@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from mycv.models import *
-
-
+from utility import diplay_skills
 
 def home(request):
   profiles = Profile.objects.all()
@@ -11,7 +10,10 @@ def home(request):
   publications = Publication.objects.all()
   studies = Study.objects.all()
 
-  return render(request, 'home.html',{'experiences':experiences,"profiles":profiles,"skillcategories":skillcategories,'skills':skills,'publications':publications})
+  skills_dico = diplay_skills(skillcategories, Subcategory.objects.all(), skills)
+
+  return render(request, 'home.html',{'experiences':experiences,"profiles":profiles,
+    "skillcategories":skillcategories,'skills':skills,'publications':publications,"skills_dico":skills_dico})
 
 
 

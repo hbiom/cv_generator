@@ -63,7 +63,6 @@ def seed():
   projet = Skillcategory.objects.create(category_name="Project")
   langue = Skillcategory.objects.create(category_name="Language")
 
-
   ML = Subcategory.objects.create(subcategory_name="Machine learning")
   Web = Subcategory.objects.create(subcategory_name="Web")
 
@@ -104,3 +103,5 @@ def seed():
 
 
 seed()
+
+
