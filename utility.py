@@ -27,7 +27,6 @@ def diplay_skills(skillcategories,subcategories, skills):
       for skill in skills:
         if skill.category.category_name == category.category_name:
           if skill.subcategory:
-            # print(skill.subcategory.subcategory_name + ':' + subcategorie.subcategory_name)
             if skill.subcategory.subcategory_name == subcategorie.subcategory_name:
               skill_dico[subcategorie.subcategory_name].append(skill.name)
           else:
