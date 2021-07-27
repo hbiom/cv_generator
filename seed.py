@@ -107,9 +107,17 @@ def seed():
                              publication_date='2019-04-02',
                              profile = hugo_profile)
 
+
+  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                       school_name = "Bootcamp",
+                       title= "Computer programming Bootcamp",
+                       description= "24-week intensive coding bootcamp learning HTML, CSS, JavaScript, Ruby and Ruby on Rails, SQL, git, GitHub, deployement , project management, UI/UX" ,
+                       obtention_date = '2019-04-02',
+                       link = "https://www.lewagon.com/fr",
+                       profile = hugo_profile )
+
   print("seeding done")
 
 
 seed()
-
 

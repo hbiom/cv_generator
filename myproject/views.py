@@ -23,4 +23,4 @@ def home(request,profile_id):
   skills_dico = diplay_skills(skillcategories, subcategories, skills)
 
   return render(request, 'home.html',{'experiences':experiences,"profile":profile,
-    'skills':skills,'publications':publications,"skills_dico":skills_dico})
+    'skills':skills,'publications':publications,"skills_dico":skills_dico,"studies":studies})

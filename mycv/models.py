@@ -50,8 +50,13 @@ class Publication(models.Model):
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
 class Study(models.Model):
-  institut = cloudinary.models.CloudinaryField('image')
+  img = cloudinary.models.CloudinaryField('image')
+  school_name = models.CharField(max_length=300, null=True)
   title = models.CharField(max_length=80)
   description =  models.TextField(max_length=800, null=True)
   obtention_date = models.DateField()
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+  link = models.CharField(max_length=500, null=True)
+
+
+

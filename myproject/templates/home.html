@@ -86,7 +86,24 @@
   </div>
 
 
-
+  <div class="box" id="education">
+    <h1 class="title">Education</h1>
+    {% for study in studies %}
+      <div class="subbox display-flex invisible">
+        <div class = "div-logo">
+          <img src={{study.img}} alt="" class = "logo-square">
+          <p class ="date">{{study.obtention_date}}</p>
+        </div>
+        <div class = "cart-info">
+          <h2>{{study.title}}</h2>
+          <h3><a href={{study.link}} target="_blank"> {{study.school_name}}</a></h3>
+          <p>{{study.description}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 
 
 {% endblock %}
+
+
