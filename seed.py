@@ -28,9 +28,9 @@ print("db deleted")
 profile_test = "I'm a Life scientist passionate about the intersections of Healthcare and Data science and programming. During my thesis, I performed statistical and data visualization analysis on clinical and biological data (transcriptomic, flow cytometry) resulting in several scientific publications and oral presentations in international conferences. I also worked on machine learning projects applied to medical images and radiomics for classification and segmentation tasks. I have experience in back-end development (Python, SQL, Flask, Django) and front-end interface (HTML, CSS, JS).Im strongly motivated to work on projects aiming to have an impact on healthcare and clinical practice."
 
 def seed():
-  hugo =  User.objects.get(username="hbottois")
+  hugo =  User.objects.get(username="hugo")
 
-  Profile.objects.create(
+  hugo_profile = Profile.objects.create(
     first_name = "Hugo",
     last_name="Bottois",
     title =  "PhD",
@@ -38,6 +38,7 @@ def seed():
     about_me = profile_test,
     user = hugo
   )
+
   Experience.objects.create(
   job_name = "Project Learder",
   company = "Capgemini Enginners",
@@ -45,7 +46,7 @@ def seed():
   description =  profile_test,
   start_date = '2019-09-02',
   end_date = '2021-09-02',
-  user = hugo
+  profile = hugo_profile
   )
 
   Experience.objects.create(
@@ -55,7 +56,7 @@ def seed():
   description =  profile_test,
   start_date = '2019-09-02',
   end_date = '2021-09-02',
-  user = hugo
+  profile = hugo_profile
   )
 
   programing = Skillcategory.objects.create(category_name="Programming")
@@ -66,43 +67,45 @@ def seed():
   Web = Subcategory.objects.create(subcategory_name="Web")
 
   # ML
-  Skill.objects.create(name="Python",category=programing,subcategory=ML)
-  Skill.objects.create(name="Sklearn",category=programing,subcategory=ML)
-  Skill.objects.create(name="Keras",category=programing,subcategory=ML)
-  Skill.objects.create(name="Tensorflow",category=programing,subcategory=ML)
+  Skill.objects.create(name="Python",category=programing,subcategory=ML, profile = hugo_profile)
+  Skill.objects.create(name="Sklearn",category=programing,subcategory=ML, profile = hugo_profile)
+  Skill.objects.create(name="Keras",category=programing,subcategory=ML, profile = hugo_profile)
+  Skill.objects.create(name="Tensorflow",category=programing,subcategory=ML, profile = hugo_profile)
 
   # Web
-  Skill.objects.create(name="HTML",category=programing,subcategory=Web)
-  Skill.objects.create(name="CSS",category=programing,subcategory=Web)
-  Skill.objects.create(name="Javascript",category=programing,subcategory=Web)
-  Skill.objects.create(name="Django",category=programing,subcategory=Web)
-  Skill.objects.create(name="Flask",category=programing,subcategory=Web)
+  Skill.objects.create(name="HTML",category=programing,subcategory=Web, profile = hugo_profile)
+  Skill.objects.create(name="CSS",category=programing,subcategory=Web, profile = hugo_profile)
+  Skill.objects.create(name="Javascript",category=programing,subcategory=Web, profile = hugo_profile)
+  Skill.objects.create(name="Django",category=programing,subcategory=Web, profile = hugo_profile)
+  Skill.objects.create(name="Flask",category=programing,subcategory=Web, profile = hugo_profile)
 
-  Skill.objects.create(name="Project Managment",category=projet)
-  Skill.objects.create(name="Trello",category=projet)
-  Skill.objects.create(name="Communication",category=projet)
+  Skill.objects.create(name="Project Managment",category=projet, profile = hugo_profile)
+  Skill.objects.create(name="Trello",category=projet, profile = hugo_profile)
+  Skill.objects.create(name="Communication",category=projet, profile = hugo_profile)
 
-  Skill.objects.create(name="English",category=langue)
-  Skill.objects.create(name="French",category=langue)
-  Skill.objects.create(name="Portuguese",category=langue)
+  Skill.objects.create(name="English",category=langue, profile = hugo_profile)
+  Skill.objects.create(name="French",category=langue, profile = hugo_profile)
 
   Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
                              journal_name="Thesis",
                              publication_link="http://www.theses.fr/2019USPCC012",
                              author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Bottois Hugo, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
-                             publication_date='2019-04-02')
+                             publication_date='2019-04-02',
+                             profile = hugo_profile)
 
   Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
                              journal_name="Thesis",
                              publication_link="http://www.theses.fr/2019USPCC012",
                              author="Anne Caignard, Stéphane Nancey, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Bottois Hugo, Matthieu Allez",
-                             publication_date='2019-04-02')
+                             publication_date='2019-04-02',
+                             profile = hugo_profile)
 
   Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
                              journal_name="Thesis",
                              publication_link="http://www.theses.fr/2019USPCC012",
                              author="Anne Caignard, Stéphane Nancey, Bottois Hugo, Bertrand Meresse, Claire Soudais, Lionel Le Bourhis, Matthieu Allez",
-                             publication_date='2019-04-02')
+                             publication_date='2019-04-02',
+                             profile = hugo_profile)
 
   print("seeding done")
 
