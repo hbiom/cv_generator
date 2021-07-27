@@ -76,17 +76,21 @@
   {% endfor %}
 </div>
 
-
-<div class="list" id="publication">
-  <h1 class="title">Publication</h1>
-  {% for publication in publications %}
-  <div class = "sublist invisible">
-    <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
-    <p>{{publication.publication_date|date:'M d, Y'}}</p>
-    <p><b>Author</b>: {{ publication.author | spotme:"Bottois Hugo" }}</p>
+{% for profile in profiles %}
+  <div class="list" id="publication">
+    <h1 class="title">Publication</h1>
+    {% for publication in publications %}
+    <div class = "sublist invisible">
+      <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
+      <p>{{publication.publication_date|date:'M d, Y'}}</p>
+      <p><b>Author</b>: {{ publication.author|spotme:profile.full_name|safe }}</p>
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
+{% endfor %}
+
+
+
+
 
 {% endblock %}
-

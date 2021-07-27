@@ -13,6 +13,13 @@ class Profile(models.Model):
   profile_pic = cloudinary.models.CloudinaryField('image')
   about_me =  models.TextField(max_length=800)
 
+  def full_name(self):
+    ''' return full name of profile user'''
+    return f'{self.last_name.capitalize() } {self.first_name.capitalize() }'
+
+
+
+
 class Experience(models.Model):
   job_name = models.CharField(max_length=100)
   company = models.CharField(max_length=100)

@@ -11,8 +11,8 @@ def spotme(author, me):
   author is a string containing names including me
   This function return author string with <span></span> around me
   '''
-  author.replace(me, f"<span>{me}</span>")
-  return f"<p>{author}</p>"
+  return author.replace(me, f"<span>{me}</span>")
 
 
 register.filter("spotme",spotme)
+

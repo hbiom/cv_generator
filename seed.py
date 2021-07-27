@@ -9,7 +9,6 @@ from datetime import timedelta
 import cloudinary
 from cloudinary.models import CloudinaryField
 
-
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myproject.settings")
 
 django.setup()
