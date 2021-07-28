@@ -95,6 +95,10 @@
 
 .competence-list {
   padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -112,3 +116,5 @@
     display: block;
   }
 }
+
+

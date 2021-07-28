@@ -20,59 +20,57 @@
     </div>
   </div>
 
-<div class="list" id="experience">
-  <h1 class="title">Experience</h1>
-  {% for experience in experiences %}
-    <div class="sublist display-flex invisible">
-      <div class = "div-logo">
-        <img src="{{experience.logo_company.url}}" alt="{{experience.job_name}}" class = "logo-long">
-        <p class ="date">{{experience.start_date|date:'Y'}}-{{experience.end_date|date:'Y'}}</p>
-      </div>
-      <div class = "cart-info">
-        <h2>{{experience.job_name}}</h2>
-        <h3>{{experience.company}}</h3>
-        <p>{{experience.description}}</p>
-      </div>
-    </div>
-    {% if forloop.counter != experiences|length  %}
-      <hr>
-    {% endif %}
-  {% endfor %}
-</div>
-
-<div class="box" id="competence">
-  <h1 class="title"> Skill </h1>
-  {% for skillcategorie, skills in skills_dico.items %}
-    <div>
-      <div class="subbox invisible">
-        <h2>{{skillcategorie}}</h2>
-        <div class="competence-list">
-          {% for key, values in skills.items %}
-            {% if key == values %}
-              <ul>
-                <li><span>{{key}} </li>
-              </ul>
-            {% else %}
-              <div class="skillset">
-                <div class="subcategorie">
-                  <span>{{key}} :</span>
-                </div>
-                <div class="skills">
-                  {% for value in values %}
-                    <span class="skill">{{value}}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              {% if forloop.counter != skills|length  %}
-                <hr>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
+  <div class="list" id="experience">
+    <h1 class="title">Experience</h1>
+    {% for experience in experiences %}
+      <div class="sublist display-flex invisible">
+        <div class = "div-logo">
+          <img src="{{experience.logo_company.url}}" alt="{{experience.job_name}}" class = "logo-long">
+          <p class ="date">{{experience.start_date|date:'Y'}}-{{experience.end_date|date:'Y'}}</p>
+        </div>
+        <div class = "cart-info">
+          <h2>{{experience.job_name}}</h2>
+          <h3>{{experience.company}}</h3>
+          <p>{{experience.description}}</p>
         </div>
       </div>
-    </div>
-  {% endfor %}
-</div>
+      {% if forloop.counter != experiences|length  %}
+        <hr>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="box" id="competence">
+    <h1 class="title"> Skill </h1>
+    {% for skillcategorie, skills in skills_dico.items %}
+      <div>
+        <div class="subbox invisible">
+          <h2>{{skillcategorie}}</h2>
+          <div class="competence-list">
+            {% for key, values in skills.items %}
+              {% if key == values %}
+                <span class="skill">{{key}}</span>
+              {% else %}
+                <div class="skillset">
+                  <div class="subcategorie">
+                    <span>{{key}} </span>
+                  </div>
+                  <div class="skills">
+                    {% for value in values %}
+                      <span class="skill">{{value}}</span>
+                    {% endfor %}
+                  </div>
+                </div>
+                {% if forloop.counter != skills|length  %}
+                  <hr>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 
   <div class="list" id="publication">
     <h1 class="title">Publication</h1>
@@ -84,7 +82,6 @@
     </div>
     {% endfor %}
   </div>
-
 
   <div class="box" id="education">
     <h1 class="title">Education</h1>

@@ -104,8 +104,30 @@ span {
   .cart-sub {
     flex-wrap: wrap;
   }
+
+  .skillset {
+    flex-wrap: wrap;
+  }
 }
 
+
+.skillset {
+  width: 100%;
+  display:flex;
+  margin-top: 15px;
+}
+
+.subcategorie {
+  width: 200px;
+  display:flex;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display:flex;
+  width:80%;
+  flex-wrap: wrap;
+}
 .skill {
   padding: 4px 6px;
   align-items: center;
@@ -116,18 +138,6 @@ span {
   margin: 0px 8px 8px 8px;
 }
 
-.skillset {
-  display:flex;
-  margin-top: 15px;
-}
 
-.subcategorie {
-  display:flex;
-  width:20%;
-}
 
-.skills {
-  display:flex;
-  width:80%;
-  flex-wrap: wrap;
-}
+
