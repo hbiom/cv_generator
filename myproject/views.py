@@ -1,12 +1,8 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from mycv.models import *
 from utility import diplay_skills
 
-
-
-
-
-def home(request,profile_id):
+def profile(request,profile_id):
 
   user = get_object_or_404(User, pk=profile_id)
   profile = get_object_or_404(Profile, pk=user.profile.id)
@@ -22,5 +18,7 @@ def home(request,profile_id):
 
   skills_dico = diplay_skills(skillcategories, subcategories, skills)
 
-  return render(request, 'home.html',{'experiences':experiences,"profile":profile,
+  return render(request, 'profile.html',{'experiences':experiences,"profile":profile,
     'skills':skills,'publications':publications,"skills_dico":skills_dico,"studies":studies})
+
+
