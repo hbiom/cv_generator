@@ -13,7 +13,7 @@
       <div class= "div-text" >
         <p> ABOUT <span> ME </span></p>
         <br>
-        <p class = "text-center"> {{profile.about_me}} </p>
+        <p class = "text-center"> {{profile.about_me|linebreaks }} </p>
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@
         <div class = "cart-info">
           <h2>{{experience.job_name}}</h2>
           <h3>{{experience.company}}</h3>
-          <p>{{experience.description}}</p>
+          <p>{{experience.description|linebreaks}}</p>
         </div>
       </div>
       {% if forloop.counter != experiences|length  %}
@@ -92,7 +92,7 @@
         <div class = "cart-info">
           <h2>{{study.title}}</h2>
           <h3><a href={{study.link}} target="_blank"> {{study.school_name}}</a></h3>
-          <p>{{study.description}}</p>
+          <p>{{study.description|linebreaks}}</p>
         </div>
       </div>
     {% endfor %}
