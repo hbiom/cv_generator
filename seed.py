@@ -22,6 +22,7 @@ Experience.objects.all().delete()
 Skill.objects.all().delete()
 Skillcategory.objects.all().delete()
 Subcategory.objects.all().delete()
+Network.objects.all().delete()
 
 print("db deleted")
 
@@ -116,8 +117,15 @@ def seed():
                        link = "https://www.lewagon.com/fr",
                        profile = hugo_profile )
 
+  Network.objects.create(network_name = "linkedin", link="tkrtktk", profile=hugo_profile)
+  Network.objects.create(network_name = "twitter", link="tkrtktk", profile=hugo_profile)
+  Network.objects.create(network_name = "github", link="tkrtktk", profile=hugo_profile)
+  Network.objects.create(network_name = "medium", link="tkrtktk", profile=hugo_profile)
+
   print("seeding done")
 
 
 seed()
+
+
 

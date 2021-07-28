@@ -59,4 +59,17 @@ class Study(models.Model):
   link = models.CharField(max_length=500, null=True)
 
 
+NETWORK = (
+  ("linkedin", "linkedin"),
+  ("twitter", "twitter"),
+  ("github", "github"),
+  ("medium", "medium"),
+)
+
+class Network(models.Model):
+  profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+  network_name = models.CharField(max_length=100, choices=NETWORK)
+  link = models.CharField(max_length=500, null=True)
+
+
 

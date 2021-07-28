@@ -16,3 +16,19 @@ def spotme(author, me):
 
 register.filter("spotme",spotme)
 
+import re
+
+def networkIcon(icon_name):
+
+  NETWORK_icon = {
+    "linkedin":"fab fa-linkedin-square",
+    "twitter":"fab fa-twitter-square",
+    "github":"fab fa-github-square",
+    "medium":"fab fa-medium",
+  }
+
+  return NETWORK_icon[icon_name]
+
+register.filter("networkIcon",networkIcon)
+
+

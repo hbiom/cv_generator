@@ -15,10 +15,11 @@ def profile(request,profile_id):
   # optimize query (select the one linked to profile)
   subcategories = Subcategory.objects.all()
   skillcategories = Skillcategory.objects.all()
+  networks = Network.objects.all()
 
   skills_dico = diplay_skills(skillcategories, subcategories, skills)
 
   return render(request, 'profile.html',{'experiences':experiences,"profile":profile,
-    'skills':skills,'publications':publications,"skills_dico":skills_dico,"studies":studies})
+    'skills':skills,'publications':publications,"networks":networks,"skills_dico":skills_dico,"studies":studies})
 
 
