@@ -99,17 +99,19 @@
   </div>
 
   <footer>
-    <h1> Follow me </h1>
-    <div class="network">
-        <ul>
-        {%for network in networks%}
-          <li>
-            <a href= {{network.link}} target= "_blank">
-              <i class="{{ network.network_name|networkIcon }}"></i>
-            </a>
-          </li>
-        {% endfor %}
-    </div>
+    {% if networks %}
+      <h1> Follow me </h1>
+      <div class="network">
+          <ul>
+          {%for network in networks%}
+            <li>
+              <a href= {{network.link}} target= "_blank">
+                <i class="{{ network.network_name|networkIcon }}"></i>
+              </a>
+            </li>
+          {% endfor %}
+      </div>
+    {% endif %}
     <p class = "copyrigth">Copyright © Bottois Hugo 2021</p>
   </footer>
 
