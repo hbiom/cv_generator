@@ -7,6 +7,15 @@
 @import "links";
 
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html{
+  scroll-behavior:smooth
+}
+
 body {
   margin:0px;
 }
@@ -28,6 +37,10 @@ h1,h2,h3,h4 {
 
 h1, h2 {
   color: black;
+}
+
+p {
+  text-align: justify;
 }
 
 h1 {
@@ -65,6 +78,7 @@ ul, li {
   padding:0;
 }
 
+
 .title {
   padding: 25px;
 }
@@ -91,19 +105,11 @@ hr {
   margin-bottom:20px;
 }
 
-// span {
-//   color: blue;
-//   font-weight: bold;
-// }
 
 @media (max-width: 960px){
   .cart-sub {
     flex-wrap: wrap;
   }
-
-  // .skillset {
-  //   flex-wrap: wrap;
-  // }
 }
 
 
