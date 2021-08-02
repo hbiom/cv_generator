@@ -9,14 +9,29 @@
       <div class = div-avatar>
         <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
         <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
+        <!-- partial ? -->
+        {% if networks %}
+          <div class="network">
+              <ul>
+                {%for network in networks%}
+                  <li>
+                    <a href= {{network.link}} target= "_blank">
+                      <i class="{{ network.network_name|networkIcon }}"></i>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+          </div>
+        {% endif %}
+
       </div>
       <div class= "div-text" >
         <p> ABOUT <span> ME </span></p>
-        <br>
         <p class = "text-center"> {{profile.about_me|linebreaks }} </p>
       </div>
     </div>
   </div>
+
 
   <div class="list" id="experience">
     <h1 class="title">Experience</h1>
@@ -37,8 +52,6 @@
       {% endif %}
     {% endfor %}
   </div>
-
-
 
   <div class="box" id="competence">
     <h1 class="title"> Skill </h1>
@@ -147,10 +160,11 @@
 
 
   <footer>
+    <!-- partial ? -->
     {% if networks %}
       <h1> Follow me </h1>
       <div class="network">
-          <ul>
+        <ul>
           {%for network in networks%}
             <li>
               <a href= {{network.link}} target= "_blank">
@@ -158,6 +172,7 @@
               </a>
             </li>
           {% endfor %}
+        </ul>
       </div>
     {% endif %}
     <p class = "copyrigth">Copyright © Bottois Hugo 2021</p>
