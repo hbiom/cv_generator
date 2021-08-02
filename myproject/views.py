@@ -11,6 +11,7 @@ def profile(request,profile_id):
   publications = Publication.objects.filter(profile=profile)
   studies = Study.objects.filter(profile=profile)
   skills = Skill.objects.filter(profile=profile)
+  portfolios = Portfolio.objects.filter(profile=profile)
 
   # optimize query (select the one linked to profile)
   subcategories = Subcategory.objects.all()
@@ -20,6 +21,6 @@ def profile(request,profile_id):
   skills_dico = diplay_skills(skillcategories, subcategories, skills)
 
   return render(request, 'profile.html',{'experiences':experiences,"profile":profile,
-    'skills':skills,'publications':publications,"networks":networks,"skills_dico":skills_dico,"studies":studies})
-
+    'skills':skills,'publications':publications,"networks":networks,"skills_dico":skills_dico,
+    "studies":studies,'portfolios':portfolios})
 

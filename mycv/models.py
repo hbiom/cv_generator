@@ -71,5 +71,14 @@ class Network(models.Model):
   network_name = models.CharField(max_length=100, choices=NETWORK)
   link = models.CharField(max_length=500, null=True)
 
+class Portfolio(models.Model):
+  profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+  img = cloudinary.models.CloudinaryField('image')
+  skills = models.ManyToManyField(Skill)
+  project_title = models.CharField(max_length=150)
+  description =  models.TextField(max_length=100)
+  link_website = models.CharField(max_length=1000, null=True)
+  link_github = models.CharField(max_length=1000, null=True)
+  link_medium = models.CharField(max_length=1000, null=True)
 
 

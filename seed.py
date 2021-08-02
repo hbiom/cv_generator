@@ -23,6 +23,8 @@ Skill.objects.all().delete()
 Skillcategory.objects.all().delete()
 Subcategory.objects.all().delete()
 Network.objects.all().delete()
+Portfolio.objects.all().delete()
+
 
 print("db deleted")
 
@@ -136,6 +138,14 @@ def seed():
   Network.objects.create(network_name = "linkedin", link="tkrtktk", profile=hugo_profile)
   Network.objects.create(network_name = "github", link="tkrtktk", profile=hugo_profile)
   Network.objects.create(network_name = "medium", link="tkrtktk", profile=hugo_profile)
+
+
+  Portfolio.objects.create(project_title = "medium",
+                           img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                           description= 'zefoiz fjz vpizubevgoij evjbeor bbermore mv',
+                           profile = hugo_profile
+                           )
+
 
   print("seeding done")
 
