@@ -143,6 +143,7 @@ def seed():
   Portfolio.objects.create(project_title = "medium",
                            img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
                            description= 'zefoiz fjz vpizubevgoij evjbeor bbermore mv',
+                           link_website="htt",
                            profile = hugo_profile
                            )
 

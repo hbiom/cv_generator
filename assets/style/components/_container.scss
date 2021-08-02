@@ -48,7 +48,6 @@
   margin-bottom: 20px;
 }
 
-
 .subbox:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
@@ -57,8 +56,6 @@
 
 
 /*list*/
-
-
 
 .list {
   display: flex;
@@ -98,7 +95,6 @@
   padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
-
 }
 
 @media screen and (max-width: 600px) {
@@ -117,4 +113,9 @@
   }
 }
 
+@media (max-width: 960px){
+  .cart-sub {
+    flex-wrap: wrap;
+  }
+}
 

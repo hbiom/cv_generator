@@ -66,14 +66,7 @@ ul, li {
 }
 
 .title {
-  padding-top: 25px;
-}
-
-.copyrigth {
-  padding-bottom: 10px;
-  text-align: center;
-  font-size: 12px;
-  color: white;
+  padding: 25px;
 }
 
 .text-center {
@@ -95,50 +88,24 @@ ul, li {
 hr {
   width: 90%;
   margin:auto;
+  margin-bottom:20px;
 }
 
-span {
-  color: blue;
-  font-weight: bold;
-}
+// span {
+//   color: blue;
+//   font-weight: bold;
+// }
 
 @media (max-width: 960px){
   .cart-sub {
     flex-wrap: wrap;
   }
 
-  .skillset {
-    flex-wrap: wrap;
-  }
+  // .skillset {
+  //   flex-wrap: wrap;
+  // }
 }
 
-
-.skillset {
-  width: 100%;
-  display:flex;
-  margin-top: 15px;
-}
-
-.subcategorie {
-  width: 200px;
-  display:flex;
-  margin-bottom: 20px;
-}
-
-.skills {
-  display:flex;
-  width:80%;
-  flex-wrap: wrap;
-}
-.skill {
-  padding: 4px 6px;
-  align-items: center;
-  background: white;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  border-radius: 4px;
-  border: 2px solid #1EDD88;
-  margin: 0px 8px 8px 8px;
-}
 
 
 
