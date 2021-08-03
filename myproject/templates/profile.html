@@ -98,21 +98,18 @@
     {% endfor %}
   </div>
 
+<li class="nav-item {% if app_url == '/' %} active{% endif %}">
 
  <div id="portfolio">
     <h1 class="title">Portfolio</h1>
     {% for project in portfolios %}
-      {% if forloop.counter|divisibleby:2 %}
-      <div class="portfolio invisible reverse">
-      {% else %}
-      <div class="portfolio invisible">
-      {% endif %}
+      <div class="portfolio invisible {% if forloop.counter|divisibleby:2 %} reverse {% endif %}">
         <div class = "img-portfolio">
           <figure>
             <img src="{{project.img}}" alt="ctt">
           </figure>
         </div>
-        <div class = "card-info-portfolio">
+        <div class = "card-info-portfolio {% if forloop.counter|divisibleby:2 %} l-border {% else %} r-border {% endif %}">
           <div class = "portfolio-description">
             <h3>{{project.project_title}}</h3>
             <p>
