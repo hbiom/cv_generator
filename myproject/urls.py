@@ -20,8 +20,9 @@ from . import views
 
 urlpatterns = [
   path('admin/', admin.site.urls),
-  path('profile/<int:profile_id>', views.profile),
+  path('profil/<str:full_name>', views.profil),
 ]
+
 
 
 from django.conf.urls.static import static

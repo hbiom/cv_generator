@@ -1,22 +1,24 @@
 
 # Create your models here.
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 import cloudinary
 from cloudinary.models import CloudinaryField
 
 class Profile(models.Model):
-  user = models.OneToOneField(User, on_delete=models.CASCADE)
+  # user = models.OneToOneField(User, on_delete=models.CASCADE)
   first_name = models.CharField(max_length=80)
   last_name = models.CharField(max_length=80)
   title = models.CharField(max_length=80)
   profile_pic = cloudinary.models.CloudinaryField('image')
   about_me =  models.TextField(max_length=800)
 
-
   def full_name(self):
     ''' return full name of profile user'''
     return f'{self.last_name.capitalize() } {self.first_name.capitalize() }'
+
+    def __str__(self):
+        return self.first_name + "_" + self.last_name
 
 
 class Experience(models.Model):

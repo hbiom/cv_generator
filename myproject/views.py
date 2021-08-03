@@ -1,11 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 from mycv.models import *
 from utility import diplay_skills
+import re
 
-def profile(request,profile_id):
 
-  user = get_object_or_404(User, pk=profile_id)
-  profile = get_object_or_404(Profile, pk=user.profile.id)
+
+def profil(request,full_name):
+
+  first_name, last_name =  re.findall('.[^A-Z]*', full_name)
+
+  try:
+      profile = Profile.objects.get(first_name=first_name, last_name=last_name)
+  except Profile.DoesNotExist:
+      return None
 
   experiences = Experience.objects.filter(profile=profile)
   publications = Publication.objects.filter(profile=profile)
