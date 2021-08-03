@@ -1,0 +1,18 @@
+
+{% load custom_tags %}
+
+
+
+{% if networks %}
+  <div class="network">
+      <ul>
+        {%for network in networks%}
+          <li>
+            <a href= {{network.link}} target= "_blank">
+              <i class="{{ network.network_name|networkIcon }}"></i>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+  </div>
+{% endif %}

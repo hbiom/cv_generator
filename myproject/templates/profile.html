@@ -9,21 +9,7 @@
       <div class = div-avatar>
         <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
         <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
-        <!-- partial ? -->
-        {% if networks %}
-          <div class="network">
-              <ul>
-                {%for network in networks%}
-                  <li>
-                    <a href= {{network.link}} target= "_blank">
-                      <i class="{{ network.network_name|networkIcon }}"></i>
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-          </div>
-        {% endif %}
-
+        {% include "_skillset.html" with networks=networks %}
       </div>
       <div class= "div-text" >
         <p> ABOUT <span> ME </span></p>
@@ -129,14 +115,6 @@
               {{project.description}}
             </p>
 
-<!--             <div class="technical_track">
-              <span>Technical Skills :</span>
-              <div class="skills">
-                <p class="skill">Python</p><p class="skill">Matplotlib</p><p class="skill">Numpy</p><p class="skill">Nibabel</p>
-              </div>
-            </div> -->
-
-
             <div class="technical_track">
               <div class="skills">
                 {% for skill in project.skills.all %}
@@ -144,7 +122,6 @@
                 {% endfor %}
               </div>
             </div>
-
 
             <div class="project_links">
               {% if project.link_website %}
@@ -164,21 +141,7 @@
   </div>
 
   <footer>
-    <!-- partial ? -->
-    {% if networks %}
-      <h1> Follow me </h1>
-      <div class="network">
-        <ul>
-          {%for network in networks%}
-            <li>
-              <a href= {{network.link}} target= "_blank">
-                <i class="{{ network.network_name|networkIcon }}"></i>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
+    {% include "_skillset.html" with networks=networks %}
     <p class = "copyrigth">Copyright © Bottois Hugo 2021</p>
   </footer>
 
