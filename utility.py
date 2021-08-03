@@ -17,7 +17,6 @@ def diplay_skills(skillcategories,subcategories, skills):
     total_skill[category.category_name] = {}
 
     for subcategorie in subcategories:
-      print(subcategorie.subcategory_name)
       skill_dico[subcategorie.subcategory_name] = []
 
       for skill in skills:

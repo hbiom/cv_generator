@@ -44,21 +44,21 @@ def seed():
   )
 
   Capgemini = """ Developing diagnosis assistance for radiologist using machine learning applied on medical images
-  \n\n
-  Scientific Projects:
-  \n\n
+  <br><br>
+  <b>Scientific Projects:</b>
+  <br><br>
   - Classification of benign and malignant soft-tissue tumors based on images and radiomic data
-  \n\n
+  <br><br>
   - Tumor Segmentation on osteosarcoma
-  \n\n
+  <br><br>
   Development of a Web demonstrator to deploy our algorithm
-  \n\n
+  <br><br>
   Mentoring intership and a team including data scientist and programmer
-  \n\n
+  <br><br>
   Redaction and communication of scientific result
-  \n\n
+  <br><br>
   Collaboration with biomedical imaging research laboratory CREATIS (Lyon)
-  \n\n
+  <br><br>
   Technical track : Python, Numpy, Keras, Tensorflow, Sklearn, Nibabel, Django, Docker """
 
   Experience.objects.create(
@@ -74,15 +74,15 @@ def seed():
   inserm = """
     Thesis project: "Acquisition and regulation of effector T cells function in Crohn's disease"
     INSERM UMRS 1160 « microenvironment, lymphocyte development and homing»
-    \n\n
-    Scientific Projects:
-    \n\n
+    <br><br>
+    <b>Scientific Projects:</b>
+    <br><br>
     - Phenotypic and transcriptomic signature of CD8 tissue resident memory T cell subsets in healthy and Crohn's disease patient intestinal mucosa
-    \n\n
+    <br><br>
     - Establishment of autologous co-coculture model of mucosal T cells and intestinal organoid to study lympho-epithelial interaction and T cell functions
-    \n\n
+    <br><br>
     - Study of NKG2D receptor implication in Crohn's disease physiopathology
-    \n\n
+    <br><br>
     Technical track : R, Bioconductor, Bioinformatic, Biostatistique, Flow cytometry, Organoid and Cell culture
   """
 
@@ -178,7 +178,7 @@ def seed():
 
   lewagon = """
   Attending Le Wagon Paris (Batch # 378):
-  \n\n
+  <br><br>
   24-week intensive coding bootcamp learning HTML, CSS, JavaScript, Ruby and Ruby on Rails, SQL, git, GitHub, deployement , project management, UI/UX.
   /n/n
   Certification de Concepteur - Développeur d'applications web
@@ -197,13 +197,13 @@ def seed():
 
   blent = """
     2 projects in collaboration with Datagram :
-    \n\n
+    <br><br>
     Predict the consequences of a sale on the turnover :
-    \n\n
+    <br><br>
     - Modeling and interpretation: Logistic Regression, CART, Random Forest, Gradient Boosting
     - Data Visualization
     Predict the category of a product based on its description:
-    \n\n
+    <br><br>
     - NLP/word embedding/word2vec
     - Deep learning
     """
@@ -237,7 +237,7 @@ def seed():
 
   dugbm = """
   This diploma is about the socio-economic and regulatory environment to valorize research and biomedical innovation coming from the hospital or the academic world in order to move towards real clinical application.
-  \n\n
+  <br><br>
   Master memory : Algorithm based on molecular test to predict post-surgical clinical relapse from Crohn's disease patient.
   """
 
@@ -272,10 +272,10 @@ def seed():
   CTT.skills.add(Python, Matplotlib, Numpy, Nibabel)
 
   cursed = """
-    ruby on rails application
-    \n\n
-    You can create an event and create/invite virtual fake users.
-    \n\n
+    Doodle clone Ruby on rails application
+    <br><br>
+    You can create an event and invite virtual fake users.
+    <br><br>
     Disponibilities for each invited user will be automaticaly created but no common date for all user will be found (like in the real word ...).
   """
 
@@ -286,6 +286,7 @@ def seed():
                            link_github="https://github.com/hbiom/DataViz_CT_CCR",
                            profile = hugo_profile
                            )
+
   cursed.skills.add(Ruby, ROR, HTML, CSS, JavaScript, Heroku)
 
 

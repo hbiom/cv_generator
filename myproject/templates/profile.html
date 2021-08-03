@@ -29,7 +29,7 @@
         <div class = "cart-info">
           <h2>{{experience.job_name}}</h2>
           <h3>{{experience.company}}</h3>
-          <p>{{experience.description|linebreaks}}</p>
+          <p>{{experience.description|safe}}</p>
         </div>
       </div>
       {% if forloop.counter != experiences|length  %}
@@ -83,7 +83,7 @@
           <div class = "portfolio-description">
             <h3>{{project.project_title}}</h3>
             <p>
-              {{project.description}}
+              {{project.description|safe}}
             </p>
             <div class="technical_track">
               <div class="skills">
