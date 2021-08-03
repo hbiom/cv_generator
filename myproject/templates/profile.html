@@ -70,36 +70,6 @@
     {% endfor %}
   </div>
 
-  <div class="list" id="publication">
-    <h1 class="title">Publication</h1>
-    {% for publication in publications %}
-    <div class = "sublist invisible">
-      <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
-      <p>{{publication.publication_date|date:'M d, Y'}}</p>
-      <p><b>Author</b>: {{ publication.author|spotme:profile.full_name|safe }}</p>
-    </div>
-    {% endfor %}
-  </div>
-
-  <div class="box" id="education">
-    <h1 class="title">Education</h1>
-    {% for study in studies %}
-      <div class="subbox display-flex invisible">
-        <div class = "div-logo">
-          <img src={{study.img}} alt="" class = "logo-square">
-          <p class ="date">{{study.obtention_date}}</p>
-        </div>
-        <div class = "cart-info">
-          <h2>{{study.title}}</h2>
-          <h3><a href={{study.link}} target="_blank"> {{study.school_name}}</a></h3>
-          <p>{{study.description|linebreaks}}</p>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-
-<li class="nav-item {% if app_url == '/' %} active{% endif %}">
-
  <div id="portfolio">
     <h1 class="title">Portfolio</h1>
     {% for project in portfolios %}
@@ -127,13 +97,44 @@
                 <a href="{{project.link_website}}" class="link_website">Website</a>
               {% endif %}
               {% if project.link_github %}
-              <a href="{{project.link_github}}" class="link_github">link_github</a>
+              <a href="{{project.link_github}}" class="link_github">Github</a>
               {% endif %}
               {% if project.link_medium %}
               <a href="{{project.link_medium}}" class="link_medium">Medium</a>
               {% endif %}
             </div>
           </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+
+  <div class="list" id="publication">
+    <h1 class="title">Publication</h1>
+    {% for publication in publications %}
+    <div class = "sublist invisible">
+      <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
+      <p>{{publication.journal_name}}</p>
+      <p>{{publication.publication_date|date:'M d, Y'}}</p>
+      <p><b>Author</b>: {{ publication.author|spotme:profile.full_name|safe }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+
+  <div class="box" id="education">
+    <h1 class="title">Education</h1>
+    {% for study in studies %}
+      <div class="subbox display-flex invisible">
+        <div class = "div-logo">
+          <img src={{study.img}} alt="" class = "logo-square">
+          <p class ="date">{{study.obtention_date}}</p>
+        </div>
+        <div class = "cart-info">
+          <h2>{{study.title}}</h2>
+          <h3><a href={{study.link}} target="_blank"> {{study.school_name}}</a></h3>
+          <p>{{study.description|linebreaks}}</p>
         </div>
       </div>
     {% endfor %}

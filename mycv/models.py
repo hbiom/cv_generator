@@ -58,7 +58,7 @@ class Study(models.Model):
   description =  models.TextField(max_length=800, null=True)
   obtention_date = models.DateField()
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
-  link = models.CharField(max_length=500, null=True)
+  link = models.URLField(max_length=500, null=True)
 
 
 NETWORK = (
@@ -71,7 +71,7 @@ NETWORK = (
 class Network(models.Model):
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
   network_name = models.CharField(max_length=100, choices=NETWORK)
-  link = models.CharField(max_length=500, null=True)
+  link = models.URLField(max_length=500, null=True)
 
 class Portfolio(models.Model):
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
@@ -79,8 +79,8 @@ class Portfolio(models.Model):
   skills = models.ManyToManyField(Skill)
   project_title = models.CharField(max_length=150)
   description =  models.TextField(max_length=100)
-  link_website = models.CharField(max_length=1000, null=True)
-  link_github = models.CharField(max_length=1000, null=True)
-  link_medium = models.CharField(max_length=1000, null=True)
+  link_website = models.URLField(max_length=1000, null=True)
+  link_github = models.URLField(max_length=1000, null=True)
+  link_medium = models.URLField(max_length=1000, null=True)
 
 

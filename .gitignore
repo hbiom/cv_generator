@@ -30,6 +30,8 @@ wheels/
 static
 media
 
+.seed.py
+
 .node_modules
 node_modules
 .module-cache
