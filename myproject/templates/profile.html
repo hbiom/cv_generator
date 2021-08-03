@@ -128,12 +128,24 @@
             <p>
               {{project.description}}
             </p>
-            <div class="technical_track">
+
+<!--             <div class="technical_track">
               <span>Technical Skills :</span>
               <div class="skills">
                 <p class="skill">Python</p><p class="skill">Matplotlib</p><p class="skill">Numpy</p><p class="skill">Nibabel</p>
               </div>
+            </div> -->
+
+
+            <div class="technical_track">
+              <div class="skills">
+                {% for skill in project.skills.all %}
+                  <p class="skill">{{skill.name}}</p>
+                {% endfor %}
+              </div>
             </div>
+
+
             <div class="project_links">
               {% if project.link_website %}
                 <a href="{{project.link_website}}" class="link_website">Website</a>

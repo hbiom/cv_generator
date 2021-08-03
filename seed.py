@@ -76,8 +76,8 @@ def seed():
   Skill.objects.create(name="Tensorflow",category=programing,subcategory=ML, profile = hugo_profile)
 
   # Web
-  Skill.objects.create(name="HTML",category=programing,subcategory=Web, profile = hugo_profile)
-  Skill.objects.create(name="CSS",category=programing,subcategory=Web, profile = hugo_profile)
+  HTML = Skill.objects.create(name="HTML",category=programing,subcategory=Web, profile = hugo_profile)
+  CSS = Skill.objects.create(name="CSS",category=programing,subcategory=Web, profile = hugo_profile)
   Skill.objects.create(name="Javascript",category=programing,subcategory=Web, profile = hugo_profile)
   Skill.objects.create(name="Django",category=programing,subcategory=Web, profile = hugo_profile)
   Skill.objects.create(name="Flask",category=programing,subcategory=Web, profile = hugo_profile)
@@ -140,12 +140,13 @@ def seed():
   Network.objects.create(network_name = "medium", link="tkrtktk", profile=hugo_profile)
 
 
-  Portfolio.objects.create(project_title = "medium",
+  CTT = Portfolio.objects.create(project_title = "medium",
                            img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
                            description= 'zefoiz fjz vpizubevgoij evjbeor bbermore mv',
                            link_website="htt",
                            profile = hugo_profile
                            )
+  CTT.skills.add(HTML, CSS)
 
 
   print("seeding done")
