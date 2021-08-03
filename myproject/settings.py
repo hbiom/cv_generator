@@ -156,7 +156,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #MEDIA_URL = '/media/'
 
-MEDIA_URL = '/public/'  # or any prefix you choose (I generally like it to be 'public')
+MEDIA_URL = '/public/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 COMPRESS_OFFLINE = False
