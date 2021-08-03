@@ -149,6 +149,16 @@ def seed():
   CTT.skills.add(HTML, CSS)
 
 
+  cursed = Portfolio.objects.create(project_title = "cursed",
+                           img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                           description= 'zefoiz fjz vpizubevgoij evjbeor bbermore mv',
+                           link_website="htt",
+                           profile = hugo_profile
+                           )
+  cursed.skills.add(HTML, CSS)
+
+
+
   print("seeding done")
 
 

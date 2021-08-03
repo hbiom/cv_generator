@@ -9,7 +9,7 @@
       <div class = div-avatar>
         <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
         <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
-        {% include "_skillset.html" with networks=networks %}
+        {% include "_network.html" with networks=networks %}
       </div>
       <div class= "div-text" >
         <p> ABOUT <span> ME </span></p>
@@ -102,7 +102,14 @@
  <div id="portfolio">
     <h1 class="title">Portfolio</h1>
     {% for project in portfolios %}
+      {% if forloop.counter|divisibleby:2 %}
+      <div class="portfolio invisible reverse">
+      {% else %}
       <div class="portfolio invisible">
+      {% endif %}
+
+<!--       <div class="portfolio invisible">
+ -->
         <div class = "img-portfolio">
           <figure>
             <img src="{{project.img}}" alt="ctt">
@@ -114,7 +121,6 @@
             <p>
               {{project.description}}
             </p>
-
             <div class="technical_track">
               <div class="skills">
                 {% for skill in project.skills.all %}
@@ -122,7 +128,6 @@
                 {% endfor %}
               </div>
             </div>
-
             <div class="project_links">
               {% if project.link_website %}
                 <a href="{{project.link_website}}" class="link_website">Website</a>
@@ -141,7 +146,7 @@
   </div>
 
   <footer>
-    {% include "_skillset.html" with networks=networks %}
+    {% include "_network.html" with networks=networks %}
     <p class = "copyrigth">Copyright © Bottois Hugo 2021</p>
   </footer>
 
