@@ -1,5 +1,14 @@
 
 def diplay_skills(skillcategories,subcategories, skills):
+  '''
+  skillcategories: skillcategories models queryset
+  subcategories: subcategories models queryset
+  skills: skills models queryset
+
+  return a dictionary with skillcategories as key and corresponding value equal to another
+  dictionary with key as subcategories and value as skills.
+  skills instance with no subcategories have equal key and value
+  '''
 
   total_skill = {}
 
