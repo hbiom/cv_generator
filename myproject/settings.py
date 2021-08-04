@@ -40,17 +40,6 @@ cloudinary.config(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-ALLOWED_HOSTS = [
-   '*',
-    '0.0.0.0'
-    'cvmyprofile.herokuapp.com',
-    'http://cvmyprofile.herokuapp.com',
-    'https://cvmyprofile.herokuapp.com',
-    '127.0.0.1'
-]
-
 
 # Application definition
 
@@ -139,11 +128,25 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+options = DATABASES['default'].get('OPTIONS', {})
+options.pop('sslmode', None)
+
+MEDIA_URL = '/public/'  # or any prefix you choose (I generally like it to be 'public')
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+ALLOWED_HOSTS = [
+    '*',
+]
+
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
