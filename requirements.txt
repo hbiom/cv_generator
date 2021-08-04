@@ -6,6 +6,7 @@ cycler==0.10.0
 dj-database-url==0.5.0
 Django==3.1.2
 django-appconf==1.0.4
+django-cloudinary-storage==0.3.0
 django-compressor==2.4
 django-generate-secret-key==1.0.2
 django-heroku==0.3.1
