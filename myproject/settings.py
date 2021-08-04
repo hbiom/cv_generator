@@ -111,7 +111,6 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # }
 
 ON_HEROKU = os.environ.get('ON_HEROKU')
-HEROKU_SERVER = os.environ.get('HEROKU_SERVER')
 
 if ON_HEROKU:
 
@@ -130,7 +129,6 @@ else:
     }
 
 
-DATABASES['default'] =  dj_database_url.config()
 
 
 # Password validation
