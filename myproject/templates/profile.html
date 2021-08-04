@@ -134,7 +134,7 @@
         <div class = "cart-info">
           <h2>{{study.title}}</h2>
           <h3><a href={{study.link}} target="_blank"> {{study.school_name}}</a></h3>
-          <p>{{study.description|linebreaks}}</p>
+          <p>{{study.description|safe}}</p>
         </div>
       </div>
     {% endfor %}

@@ -180,7 +180,7 @@ def seed():
   Attending Le Wagon Paris (Batch # 378):
   <br><br>
   24-week intensive coding bootcamp learning HTML, CSS, JavaScript, Ruby and Ruby on Rails, SQL, git, GitHub, deployement , project management, UI/UX.
-  /n/n
+  <br><br>
   Certification de Concepteur - Développeur d'applications web
   Enregistrée au RNCP au niveau VI (FR) et niveau VI (EU)
   Code NSF 326 informatique, traitement de l'information, réseaux de transmission
