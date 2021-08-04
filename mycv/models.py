@@ -47,7 +47,7 @@ class Publication(models.Model):
   title = models.CharField(max_length=250)
   journal_name = models.CharField(max_length=150)
   publication_link = models.URLField(max_length=10000)
-  author =  models.TextField(max_length=800)
+  author =  models.TextField(max_length=4000)
   abstract =  models.TextField(max_length=4000, null=True)
   publication_date = models.DateField()
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
@@ -78,10 +78,10 @@ class Portfolio(models.Model):
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
   img = cloudinary.models.CloudinaryField('image')
   skills = models.ManyToManyField(Skill)
-  project_title = models.CharField(max_length=150)
+  project_title = models.CharField(max_length=250)
   description =  models.TextField(max_length=4000)
-  link_website = models.URLField(max_length=1000, null=True)
-  link_github = models.URLField(max_length=1000, null=True)
-  link_medium = models.URLField(max_length=1000, null=True)
+  link_website = models.URLField(max_length=1500, null=True)
+  link_github = models.URLField(max_length=1500, null=True)
+  link_medium = models.URLField(max_length=1500, null=True)
 
 
