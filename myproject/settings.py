@@ -41,6 +41,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = [
+    '0.0.0.0'
+    'cvmyprofile.herokuapp.com',
+    '127.0.0.1'
+]
 
 # Application definition
 
