@@ -43,58 +43,6 @@ def seed():
     about_me = profile_description
   )
 
-  Capgemini = """ Developing diagnosis assistance for radiologist using machine learning applied on medical images
-  <br><br>
-  <b>Scientific Projects:</b>
-  <br><br>
-  - Classification of benign and malignant soft-tissue tumors based on images and radiomic data
-  <br><br>
-  - Tumor Segmentation on osteosarcoma
-  <br><br>
-  Development of a Web demonstrator to deploy our algorithm
-  <br><br>
-  Mentoring intership and a team including data scientist and programmer
-  <br><br>
-  Redaction and communication of scientific result
-  <br><br>
-  Collaboration with biomedical imaging research laboratory CREATIS (Lyon)
-  <br><br>
-  Technical track : Python, Numpy, Keras, Tensorflow, Sklearn, Nibabel, Django, Docker """
-
-  Experience.objects.create(
-  job_name = "Project Learder",
-  company = "Capgemini Enginners",
-  logo_company = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
-  description =  Capgemini,
-  start_date = '2019-09-02',
-  end_date = '2021-09-02',
-  profile = hugo_profile
-  )
-
-  inserm = """
-    Thesis project: "Acquisition and regulation of effector T cells function in Crohn's disease"
-    INSERM UMRS 1160 « microenvironment, lymphocyte development and homing»
-    <br><br>
-    <b>Scientific Projects:</b>
-    <br><br>
-    - Phenotypic and transcriptomic signature of CD8 tissue resident memory T cell subsets in healthy and Crohn's disease patient intestinal mucosa
-    <br><br>
-    - Establishment of autologous co-coculture model of mucosal T cells and intestinal organoid to study lympho-epithelial interaction and T cell functions
-    <br><br>
-    - Study of NKG2D receptor implication in Crohn's disease physiopathology
-    <br><br>
-    Technical track : R, Bioconductor, Bioinformatic, Biostatistique, Flow cytometry, Organoid and Cell culture
-  """
-
-  Experience.objects.create(
-  job_name = "Science project leader, PhD candidate",
-  company = "Paris Diderot/Hopital Saint Louis",
-  logo_company = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
-  description =  inserm,
-  start_date = '2015-09-02',
-  end_date = '2019-04-03',
-  profile = hugo_profile)
-
   programing = Skillcategory.objects.create(category_name="Programming")
   projet = Skillcategory.objects.create(category_name="Project")
   langue = Skillcategory.objects.create(category_name="Language")
@@ -128,6 +76,73 @@ def seed():
 
   English = Skill.objects.create(name="English",category=langue, profile = hugo_profile, core_skill = True)
   French = Skill.objects.create(name="French",category=langue, profile = hugo_profile, core_skill = True)
+
+  R = Skill.objects.create(name="R",category=programing,subcategory=ML, profile = hugo_profile)
+  Bioconductor = Skill.objects.create(name="Bioconductor",category=programing,subcategory=ML, profile = hugo_profile)
+  Bioinformatic = Skill.objects.create(name="Bioinformatic",category=programing,subcategory=ML, profile = hugo_profile)
+  Biostatistique = Skill.objects.create(name="Biostatistique",category=programing,subcategory=ML, profile = hugo_profile)
+  Flow_cytometry = Skill.objects.create(name="Flow cytometry",category=programing,subcategory=ML, profile = hugo_profile)
+  Organoid = Skill.objects.create(name="Organoid",category=programing,subcategory=ML, profile = hugo_profile)
+  Cell_culture = Skill.objects.create(name="Cell culture",category=programing,subcategory=ML, profile = hugo_profile)
+
+
+
+  Capgemini_text = """ Developing diagnosis assistance for radiologist using machine learning applied on medical images
+  <br><br>
+  <b>Scientific Projects:</b>
+  <br><br>
+  - Classification of benign and malignant soft-tissue tumors based on images and radiomic data
+  <br><br>
+  - Tumor Segmentation on osteosarcoma
+  <br><br>
+  Development of a Web demonstrator to deploy our algorithm
+  <br><br>
+  Mentoring intership and a team including data scientist and programmer
+  <br><br>
+  Redaction and communication of scientific result
+  <br><br>
+  Collaboration with biomedical imaging research laboratory CREATIS (Lyon)
+  <br><br>
+  Technical track : Python, Numpy, Keras, Tensorflow, Sklearn, Nibabel, Django, Docker """
+
+  Capgemini = Experience.objects.create(
+                                        job_name = "Project Learder",
+                                        company = "Capgemini Enginners",
+                                        logo_company = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                                        description =  Capgemini_text,
+                                        start_date = '2019-09-02',
+                                        end_date = '2021-09-02',
+                                        profile = hugo_profile)
+
+  inserm_text = """
+    Thesis project: "Acquisition and regulation of effector T cells function in Crohn's disease"
+    INSERM UMRS 1160 « microenvironment, lymphocyte development and homing»
+    <br><br>
+    <b>Scientific Projects:</b>
+    <br><br>
+    - Phenotypic and transcriptomic signature of CD8 tissue resident memory T cell subsets in healthy and Crohn's disease patient intestinal mucosa
+    <br><br>
+    - Establishment of autologous co-coculture model of mucosal T cells and intestinal organoid to study lympho-epithelial interaction and T cell functions
+    <br><br>
+    - Study of NKG2D receptor implication in Crohn's disease physiopathology
+    <br><br>
+    Technical track : R, Bioconductor, Bioinformatic, Biostatistique, Flow cytometry, Organoid and Cell culture
+  """
+
+  inserm = Experience.objects.create(
+                                    job_name = "Science project leader, PhD candidate",
+                                    company = "Paris Diderot/Hopital Saint Louis",
+                                    logo_company = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                                    description =  inserm_text,
+                                    start_date = '2015-09-02',
+                                    end_date = '2019-04-03',
+                                    profile = hugo_profile)
+
+
+  Capgemini.skills.add(Python, Matplotlib, Numpy, Nibabel, Keras, Sklearn, Nibabel, Django, Flask)
+  inserm.skills.add(R, Bioconductor, Bioinformatic, Biostatistique, Flow_cytometry, Organoid, Cell_culture)
+
+
 
 
   Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
@@ -270,6 +285,7 @@ def seed():
                            link_github="https://github.com/hbiom/DataViz_CT_CCR",
                            profile = hugo_profile
                            )
+
   CTT.skills.add(Python, Matplotlib, Numpy, Nibabel)
 
   cursed = """

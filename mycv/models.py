@@ -21,14 +21,6 @@ class Profile(models.Model):
         return self.first_name + "_" + self.last_name
 
 
-class Experience(models.Model):
-  job_name = models.CharField(max_length=100)
-  company = models.CharField(max_length=100)
-  logo_company = cloudinary.models.CloudinaryField('image')
-  description =  models.TextField(max_length=800)
-  start_date = models.DateField()
-  end_date = models.DateField()
-  profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
 class Skillcategory(models.Model):
   category_name = models.CharField(max_length=150)
@@ -38,10 +30,20 @@ class Subcategory(models.Model):
 
 class Skill(models.Model):
   name = models.CharField(max_length=150)
-  category = models.ForeignKey(Skillcategory, on_delete=models.CASCADE)
+  category = models.ForeignKey(Skillcategory,blank=True, null=True, on_delete=models.CASCADE)
   subcategory = models.ForeignKey(Subcategory, blank=True, null=True, on_delete=models.CASCADE)
   core_skill = models.BooleanField(default=False)
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+
+class Experience(models.Model):
+  job_name = models.CharField(max_length=100)
+  company = models.CharField(max_length=100)
+  logo_company = cloudinary.models.CloudinaryField('image')
+  description =  models.TextField(max_length=800)
+  start_date = models.DateField()
+  end_date = models.DateField()
+  profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+  skills = models.ManyToManyField(Skill)
 
 class Publication(models.Model):
   title = models.CharField(max_length=80)
