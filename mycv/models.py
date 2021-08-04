@@ -11,7 +11,7 @@ class Profile(models.Model):
   last_name = models.CharField(max_length=80)
   title = models.CharField(max_length=80)
   profile_pic = cloudinary.models.CloudinaryField('image')
-  about_me =  models.TextField(max_length=800)
+  about_me =  models.TextField(max_length=4000)
 
   def full_name(self):
     ''' return full name of profile user'''
@@ -37,7 +37,7 @@ class Experience(models.Model):
   job_name = models.CharField(max_length=100)
   company = models.CharField(max_length=100)
   logo_company = cloudinary.models.CloudinaryField('image')
-  description =  models.TextField(max_length=800)
+  description =  models.TextField(max_length=4000)
   start_date = models.DateField()
   end_date = models.DateField()
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
@@ -48,7 +48,7 @@ class Publication(models.Model):
   journal_name = models.CharField(max_length=150)
   publication_link = models.URLField(max_length=10000)
   author =  models.TextField(max_length=800)
-  abstract =  models.TextField(max_length=800, null=True)
+  abstract =  models.TextField(max_length=4000, null=True)
   publication_date = models.DateField()
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
@@ -56,7 +56,7 @@ class Study(models.Model):
   img = cloudinary.models.CloudinaryField('image')
   school_name = models.CharField(max_length=300, null=True)
   title = models.CharField(max_length=80)
-  description =  models.TextField(max_length=800, null=True)
+  description =  models.TextField(max_length=4000, null=True)
   obtention_date = models.DateField()
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
   link = models.URLField(max_length=500, null=True)
@@ -79,7 +79,7 @@ class Portfolio(models.Model):
   img = cloudinary.models.CloudinaryField('image')
   skills = models.ManyToManyField(Skill)
   project_title = models.CharField(max_length=150)
-  description =  models.TextField(max_length=100)
+  description =  models.TextField(max_length=4000)
   link_website = models.URLField(max_length=1000, null=True)
   link_github = models.URLField(max_length=1000, null=True)
   link_medium = models.URLField(max_length=1000, null=True)

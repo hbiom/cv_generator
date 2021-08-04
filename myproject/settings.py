@@ -34,6 +34,9 @@ cloudinary.config(
   api_secret = str(os.getenv('API_SECRET'))
 )
 
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -135,11 +138,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-options = DATABASES['default'].get('OPTIONS', {})
-options.pop('sslmode', None)
+# options = DATABASES['default'].get('OPTIONS', {})
+# options.pop('sslmode', None)
 
 MEDIA_URL = '/public/'  # or any prefix you choose (I generally like it to be 'public')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -194,3 +197,4 @@ if not DEBUG:
                  '-t babelify {infile} -o {outfile}'),
 )
 
+# django_heroku.settings(locals())
