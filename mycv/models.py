@@ -9,7 +9,7 @@ class Profile(models.Model):
   # user = models.OneToOneField(User, on_delete=models.CASCADE)
   first_name = models.CharField(max_length=80)
   last_name = models.CharField(max_length=80)
-  title = models.CharField(max_length=80)
+  title = models.CharField(max_length=200)
   profile_pic = cloudinary.models.CloudinaryField('image')
   about_me =  models.TextField(max_length=4000)
 
@@ -44,7 +44,7 @@ class Experience(models.Model):
   skills = models.ManyToManyField(Skill)
 
 class Publication(models.Model):
-  title = models.CharField(max_length=80)
+  title = models.CharField(max_length=250)
   journal_name = models.CharField(max_length=150)
   publication_link = models.URLField(max_length=10000)
   author =  models.TextField(max_length=800)
@@ -55,7 +55,7 @@ class Publication(models.Model):
 class Study(models.Model):
   img = cloudinary.models.CloudinaryField('image')
   school_name = models.CharField(max_length=300, null=True)
-  title = models.CharField(max_length=80)
+  title = models.CharField(max_length=250)
   description =  models.TextField(max_length=4000, null=True)
   obtention_date = models.DateField()
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
