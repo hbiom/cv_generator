@@ -194,4 +194,3 @@ if not DEBUG:
                  '-t babelify {infile} -o {outfile}'),
 )
 
-django_heroku.settings(locals())
