@@ -9,7 +9,7 @@ from pathlib import Path
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -193,3 +193,5 @@ if not DEBUG:
     ('text/jsx', 'NODE_ENV=production node_modules/.bin/browserify '
                  '-t babelify {infile} -o {outfile}'),
 )
+
+django_heroku.settings(locals())

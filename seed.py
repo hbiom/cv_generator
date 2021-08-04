@@ -17,13 +17,13 @@ from mycv.models import *
 from django.contrib.auth.models import User
 
 
-Profile.objects.all().delete()
-Experience.objects.all().delete()
-Skill.objects.all().delete()
-Skillcategory.objects.all().delete()
-Subcategory.objects.all().delete()
-Network.objects.all().delete()
-Portfolio.objects.all().delete()
+# Profile.objects.all().delete()
+# Experience.objects.all().delete()
+# Skill.objects.all().delete()
+# Skillcategory.objects.all().delete()
+# Subcategory.objects.all().delete()
+# Network.objects.all().delete()
+# Portfolio.objects.all().delete()
 
 
 print("db deleted")
