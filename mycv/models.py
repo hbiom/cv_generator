@@ -40,6 +40,7 @@ class Skill(models.Model):
   name = models.CharField(max_length=150)
   category = models.ForeignKey(Skillcategory, on_delete=models.CASCADE)
   subcategory = models.ForeignKey(Subcategory, blank=True, null=True, on_delete=models.CASCADE)
+  core_skill = models.BooleanField(default=False)
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
 class Publication(models.Model):

@@ -17,7 +17,7 @@ def profil(request,full_name):
   experiences = Experience.objects.filter(profile=profile)
   publications = Publication.objects.filter(profile=profile)
   studies = Study.objects.filter(profile=profile)
-  skills = Skill.objects.filter(profile=profile)
+  skills = Skill.objects.filter(profile=profile, core_skill=True)
   portfolios = Portfolio.objects.filter(profile=profile)
 
   # optimize query (select the one linked to profile)

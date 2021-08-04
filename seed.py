@@ -103,10 +103,10 @@ def seed():
   Web = Subcategory.objects.create(subcategory_name="Web")
 
   # ML
-  Python = Skill.objects.create(name="Python",category=programing,subcategory=ML, profile = hugo_profile)
-  Sklearn = Skill.objects.create(name="Sklearn",category=programing,subcategory=ML, profile = hugo_profile)
-  Keras = Skill.objects.create(name="Keras",category=programing,subcategory=ML, profile = hugo_profile)
-  Tensorflow = Skill.objects.create(name="Tensorflow",category=programing,subcategory=ML, profile = hugo_profile)
+  Python = Skill.objects.create(name="Python",category=programing,subcategory=ML, profile = hugo_profile, core_skill = True)
+  Sklearn = Skill.objects.create(name="Sklearn",category=programing,subcategory=ML, profile = hugo_profile, core_skill = True)
+  Keras = Skill.objects.create(name="Keras",category=programing,subcategory=ML, profile = hugo_profile, core_skill = True)
+  Tensorflow = Skill.objects.create(name="Tensorflow",category=programing,subcategory=ML, profile = hugo_profile, core_skill = True)
 
   Matplotlib = Skill.objects.create(name="Matplotlib",category=programing,subcategory=ML, profile = hugo_profile)
   Numpy = Skill.objects.create(name="Numpy",category=programing,subcategory=ML, profile = hugo_profile)
@@ -116,18 +116,18 @@ def seed():
   # Web
   ROR = Skill.objects.create(name="Ruby on rails",category=programing,subcategory=Web, profile = hugo_profile)
   Ruby = Skill.objects.create(name="Ruby",category=programing,subcategory=Web, profile = hugo_profile)
-  HTML = Skill.objects.create(name="HTML",category=programing,subcategory=Web, profile = hugo_profile)
-  CSS = Skill.objects.create(name="CSS",category=programing,subcategory=Web, profile = hugo_profile)
-  JavaScript = Skill.objects.create(name="Javascript",category=programing,subcategory=Web, profile = hugo_profile)
-  Django = Skill.objects.create(name="Django",category=programing,subcategory=Web, profile = hugo_profile)
-  Flask = Skill.objects.create(name="Flask",category=programing,subcategory=Web, profile = hugo_profile)
+  HTML = Skill.objects.create(name="HTML",category=programing,subcategory=Web, profile = hugo_profile, core_skill = True)
+  CSS = Skill.objects.create(name="CSS",category=programing,subcategory=Web, profile = hugo_profile, core_skill = True)
+  JavaScript = Skill.objects.create(name="Javascript",category=programing,subcategory=Web, profile = hugo_profile, core_skill = True)
+  Django = Skill.objects.create(name="Django",category=programing,subcategory=Web, profile = hugo_profile, core_skill = True)
+  Flask = Skill.objects.create(name="Flask",category=programing,subcategory=Web, profile = hugo_profile, core_skill = True)
 
-  project_management = Skill.objects.create(name="Project Management",category=projet, profile = hugo_profile)
-  Trello = Skill.objects.create(name="Trello",category=projet, profile = hugo_profile)
-  Communication = Skill.objects.create(name="Communication",category=projet, profile = hugo_profile)
+  project_management = Skill.objects.create(name="Project Management",category=projet, profile = hugo_profile, core_skill = True)
+  Trello = Skill.objects.create(name="Trello",category=projet, profile = hugo_profile, core_skill = True)
+  Communication = Skill.objects.create(name="Communication",category=projet, profile = hugo_profile, core_skill = True)
 
-  English = Skill.objects.create(name="English",category=langue, profile = hugo_profile)
-  French = Skill.objects.create(name="French",category=langue, profile = hugo_profile)
+  English = Skill.objects.create(name="English",category=langue, profile = hugo_profile, core_skill = True)
+  French = Skill.objects.create(name="French",category=langue, profile = hugo_profile, core_skill = True)
 
 
   Publication.objects.create(title = "Thesis : Acquisition and regulation of effector T cell functions in Crohn’s disease",
@@ -205,6 +205,7 @@ def seed():
     Predict the category of a product based on its description:
     <br><br>
     - NLP/word embedding/word2vec
+    <br><br>
     - Deep learning
     """
 
