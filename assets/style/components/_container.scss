@@ -44,11 +44,11 @@
 }
 
 .cart-info a {
-    color: grey;
+  color: grey;
 }
 
 .cart-info a:hover {
-    color: black;
+  color: black;
 }
 
 #publication {
@@ -126,9 +126,8 @@
   }
 }
 
-@media (max-width: 960px){
+@media (max-width: 600px){
   .cart-sub {
     flex-wrap: wrap;
   }
 }
-

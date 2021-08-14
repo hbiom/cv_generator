@@ -40,7 +40,6 @@
 
 // skills
 
-
 .technical_track {
   display: flex;
   justify-content:flex-start;
@@ -49,7 +48,6 @@
   flex-wrap: wrap;
 }
 
-
 .technical_track .categorie {
   color: blue;
   font-weight: bold;
@@ -57,8 +55,6 @@
   width: 140px;
   padding-right: 20px;
 }
-
-
 
 .skills {
   display:flex;
@@ -87,8 +83,6 @@
   border: 2px solid #1EDD88;
 }
 
-
-
 /*portfolio animation */
 
 .portfolio:hover {
@@ -116,8 +110,6 @@ figure {
   background: #fff;
   overflow: hidden;
 }
-
-
 
 @media screen and (max-width: 600px) {
 

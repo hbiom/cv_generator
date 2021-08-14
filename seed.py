@@ -292,6 +292,23 @@ def seed():
 
   CTT.skills.add(Python, Matplotlib, Numpy, Nibabel)
 
+  cv_generator = """
+    Django application
+    <br><br>
+    You can create your own profile to share your skills, experiences and achivement.
+  """
+
+  cv_generator_website = Portfolio.objects.create(project_title = "CV generator website",
+                           img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1628976213/cv_yrrdbv.png",
+                           description= cv_generator,
+                           link_website="https://cvmyprofile.herokuapp.com/profil/HugoBottois",
+                           link_github="https://github.com/hbiom/cv_generator",
+                           profile = hugo_profile
+                           )
+
+  cv_generator_website.skills.add(Python, Django, HTML, CSS, JavaScript, Heroku)
+
+
   cursed = """
     Doodle clone Ruby on rails application
     <br><br>
