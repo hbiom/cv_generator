@@ -17,14 +17,20 @@ class Profile(models.Model):
     ''' return full name of profile user'''
     return f'{self.last_name.capitalize() } {self.first_name.capitalize() }'
 
-    def __str__(self):
-        return self.first_name + "_" + self.last_name
+  def __str__(self):
+      return self.first_name + " " + self.last_name
 
 class Skillcategory(models.Model):
   category_name = models.CharField(max_length=150)
 
+  def __str__(self):
+    return self.category_name
+
 class Subcategory(models.Model):
   subcategory_name = models.CharField(max_length=150)
+
+  def __str__(self):
+    return self.subcategory_name
 
 class Skill(models.Model):
   name = models.CharField(max_length=150)
@@ -32,6 +38,9 @@ class Skill(models.Model):
   subcategory = models.ForeignKey(Subcategory, blank=True, null=True, on_delete=models.CASCADE)
   core_skill = models.BooleanField(default=False)
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return self.name
 
 class Experience(models.Model):
   job_name = models.CharField(max_length=100)
@@ -43,6 +52,9 @@ class Experience(models.Model):
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
   skills = models.ManyToManyField(Skill)
 
+  def __str__(self):
+    return self.job_name
+
 class Publication(models.Model):
   title = models.CharField(max_length=250)
   journal_name = models.CharField(max_length=150)
@@ -51,6 +63,10 @@ class Publication(models.Model):
   abstract =  models.TextField(max_length=4000, null=True)
   publication_date = models.DateField()
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return self.title
+
 
 class Study(models.Model):
   img = cloudinary.models.CloudinaryField('image')
@@ -61,6 +77,8 @@ class Study(models.Model):
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
   link = models.URLField(max_length=500, null=True)
 
+  def __str__(self):
+    return self.title
 
 NETWORK = (
   ("linkedin", "linkedin"),
@@ -74,6 +92,9 @@ class Network(models.Model):
   network_name = models.CharField(max_length=100, choices=NETWORK)
   link = models.URLField(max_length=500, null=True)
 
+  def __str__(self):
+    return self.network_name
+
 class Portfolio(models.Model):
   profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
   img = cloudinary.models.CloudinaryField('image')
@@ -84,4 +105,5 @@ class Portfolio(models.Model):
   link_github = models.URLField(max_length=1500, null=True)
   link_medium = models.URLField(max_length=1500, null=True)
 
-
+  def __str__(self):
+    return self.project_title

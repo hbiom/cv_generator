@@ -126,7 +126,7 @@
       <h3><a href="{{publication.publication_link}}" target="_blank"> {{publication.title}}</a></h3>
       <div class = "journal_info">
         <p class="journal">{{publication.journal_name}}</p>
-        <p>({{publication.publication_date|date:'M d, Y'}})</p>
+        <p>({{publication.publication_date|date:'Y'}})</p>
       </div>
       <p class="authors"><b>Author</b>: {{ publication.author|spotme:profile.full_name|safe }}</p>
     </div>
@@ -140,7 +140,7 @@
       <div class="subbox display-flex invisible">
         <div class = "div-logo">
           <img src={{study.img}} alt="" class = "logo-square">
-          <p class ="date">{{study.obtention_date}}</p>
+          <p class ="date">{{study.obtention_date|date:'Y'}}</p>
         </div>
         <div class = "cart-info">
           <h2>{{study.title}}</h2>
