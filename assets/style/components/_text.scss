@@ -1,0 +1,46 @@
+
+
+
+.journal_info {
+  display: flex
+}
+
+.journal {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.authors {
+  margin:0px;
+}
+
+.me {
+  color: blue;
+  font-weight: bold;
+}
+
+.title {
+  padding: 25px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.date {
+  color: grey;
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+hr {
+  width: 90%;
+  margin:auto;
+  margin-bottom:20px;
+}

@@ -5,6 +5,7 @@
 @import "footer";
 @import "portfolio";
 @import "links";
+@import "text";
 
 
 html, body {
@@ -76,38 +77,6 @@ ul, li {
   line-height: 20px;
   text-decoration: none;
   padding:0;
-}
-
-
-.me {
-  color: blue;
-  font-weight: bold;
-}
-
-.title {
-  padding: 25px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.display-flex {
-  display: flex;
-}
-
-.date {
-  color: grey;
-  margin: 0;
-  text-align: center;
-  padding-top: 20px;
-  font-weight: bold;
-}
-
-hr {
-  width: 90%;
-  margin:auto;
-  margin-bottom:20px;
 }
 
 
