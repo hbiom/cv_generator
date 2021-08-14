@@ -108,7 +108,7 @@ def seed():
   <br><br>
   Collaboration with biomedical imaging research laboratory CREATIS (Lyon)
   <br><br>
-  Technical track : Python, Numpy, Keras, Tensorflow, Sklearn, Nibabel, Django, Docker """
+  """
 
   Capgemini = Experience.objects.create(
                                         job_name = "Project Learder",
@@ -131,7 +131,6 @@ def seed():
     <br><br>
     - Study of NKG2D receptor implication in Crohn's disease physiopathology
     <br><br>
-    Technical track : R, Bioconductor, Bioinformatic, Biostatistique, Flow cytometry, Organoid and Cell culture
   """
 
   inserm = Experience.objects.create(

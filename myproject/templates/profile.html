@@ -31,7 +31,9 @@
           <h3>{{experience.company}}</h3>
           <p>{{experience.description|safe}}</p>
           <div class="technical_track">
-            <span>Technical Skills :</span>
+            <div class="categorie">
+              <span>Technical track</span>
+            </div>
             <div class="skills">
               {% for skill in experience.skills.all %}
                 <p class="skill">{{skill.name}}</p>
@@ -96,7 +98,9 @@
               {{project.description|safe}}
             </p>
             <div class="technical_track">
-              <span>Technical Skills :</span>
+              <div class="categorie">
+                <span>Technical track</span>
+              </div>
               <div class="skills">
                 {% for skill in project.skills.all %}
                   <p class="skill">{{skill.name}}</p>
