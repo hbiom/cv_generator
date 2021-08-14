@@ -51,6 +51,8 @@
   color: black;
 }
 
+
+
 #publication {
   width: 80%;
   margin: auto;
@@ -119,6 +121,7 @@
   .sublist {
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
 
   .list > sublist {

@@ -48,7 +48,7 @@
   flex-wrap: wrap;
 }
 
-.technical_track .categorie {
+ .categorie {
   color: blue;
   font-weight: bold;
   font-size: 20px;
@@ -113,6 +113,11 @@ figure {
 
 @media screen and (max-width: 600px) {
 
+  .categorie {
+    padding-bottom: 15px;
+    width:100%;
+  }
+
   .portfolio {
     margin: 0px;
   }
@@ -123,7 +128,7 @@ figure {
   }
 
   .img-portfolio img {
-    width: 80%;
+    width: 70%;
   }
 
   .technical_track span {
