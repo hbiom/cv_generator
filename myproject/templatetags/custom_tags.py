@@ -4,14 +4,32 @@ from django import template
 register = template.Library()
 
 
+
+# "(bottois\s\w+|hugo\s\w+)/i"
+# return f'{self.last_name.capitalize() } {self.first_name.capitalize() }'
+
 #  to optimse
-def spotme(author, me):
+def spotme(authors, me):
   '''
-  me is a single name
-  author is a string containing names including me
-  This function return author string with <span></span> around me
+  This function return author string with <span class="me"></span> around me
+  me is a name (ex last_name first name)
+  authors is a string containing names including me
   '''
-  return author.replace(me, f"<span class=\"me\">{me}</span>")
+  # match regular expression for me and variation
+  math = rf"({me.split()[0]}\s\w+|{me.split()[1]}\s\w+)"
+
+  for myname in authors.split(","):
+    if re.search(math, myname, re.IGNORECASE):
+      authors = authors.replace(myname, f"<span class=\"me\">{myname}</span>")
+
+  return authors
+
+
+
+
+
+
+
 
 
 register.filter("spotme",spotme)

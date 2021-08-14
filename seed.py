@@ -46,6 +46,7 @@ def seed():
   programing = Skillcategory.objects.create(category_name="Programming")
   projet = Skillcategory.objects.create(category_name="Project")
   langue = Skillcategory.objects.create(category_name="Language")
+  LF = Skillcategory.objects.create(category_name="Life science")
 
   ML = Subcategory.objects.create(subcategory_name="Machine learning")
   Web = Subcategory.objects.create(subcategory_name="Web")
@@ -57,6 +58,7 @@ def seed():
   Tensorflow = Skill.objects.create(name="Tensorflow",category=programing,subcategory=ML, profile = hugo_profile, core_skill = True)
 
   Matplotlib = Skill.objects.create(name="Matplotlib",category=programing,subcategory=ML, profile = hugo_profile)
+  Seaborn = Skill.objects.create(name="Seaborn",category=programing,subcategory=ML, profile = hugo_profile)
   Numpy = Skill.objects.create(name="Numpy",category=programing,subcategory=ML, profile = hugo_profile)
   Nibabel = Skill.objects.create(name="Nibabel",category=programing,subcategory=ML, profile = hugo_profile)
   Heroku = Skill.objects.create(name="Heroku",category=programing,subcategory=ML, profile = hugo_profile)
@@ -77,14 +79,17 @@ def seed():
   English = Skill.objects.create(name="English",category=langue, profile = hugo_profile, core_skill = True)
   French = Skill.objects.create(name="French",category=langue, profile = hugo_profile, core_skill = True)
 
-  R = Skill.objects.create(name="R",category=programing,subcategory=ML, profile = hugo_profile)
-  Bioconductor = Skill.objects.create(name="Bioconductor",category=programing,subcategory=ML, profile = hugo_profile)
-  Bioinformatic = Skill.objects.create(name="Bioinformatic",category=programing,subcategory=ML, profile = hugo_profile)
-  Biostatistique = Skill.objects.create(name="Biostatistique",category=programing,subcategory=ML, profile = hugo_profile)
-  Flow_cytometry = Skill.objects.create(name="Flow cytometry",category=programing,subcategory=ML, profile = hugo_profile)
-  Organoid = Skill.objects.create(name="Organoid",category=programing,subcategory=ML, profile = hugo_profile)
-  Cell_culture = Skill.objects.create(name="Cell culture",category=programing,subcategory=ML, profile = hugo_profile)
 
+  # Life science
+  R = Skill.objects.create(name="R",category=LF, profile = hugo_profile)
+  Immunology = Skill.objects.create(name="Immunology",category=LF, profile = hugo_profile, core_skill = True)
+  Cancer = Skill.objects.create(name="Cancer",category=LF, profile = hugo_profile, core_skill = True)
+  Bioinformatic = Skill.objects.create(name="Bioinformatic",category=LF, profile = hugo_profile, core_skill = True)
+  Bioconductor = Skill.objects.create(name="Bioconductor",category=LF, profile = hugo_profile, core_skill = True)
+  Biostatistique = Skill.objects.create(name="Biostatic",category=LF, profile = hugo_profile, core_skill = True)
+  Flow_cytometry = Skill.objects.create(name="Flow cytometry",category=LF, profile = hugo_profile, core_skill = True)
+  Organoid = Skill.objects.create(name="Organoid",category=LF, profile = hugo_profile, core_skill = True)
+  Cell_culture = Skill.objects.create(name="Cell culture",category=LF, profile = hugo_profile, core_skill = True)
 
 
   Capgemini_text = """ Developing diagnosis assistance for radiologist using machine learning applied on medical images
