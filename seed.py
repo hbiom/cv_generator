@@ -170,7 +170,7 @@ def seed():
   Publication.objects.create(title = "Association Between Microscopic Lesions at Ileal Resection Margin and Recurrence After Surgery in Patients With Crohn’s Disease",
                              journal_name="Clinical Gastroenterology and Hepatology",
                              publication_link="https://www.cghjournal.org/article/S1542-3565(19)30435-5/pdft",
-                             author="Nassim Hammoudi, Dominique Cazals-Hatem, Claire Auzolle, Charlotte Gardair, Marjolaine Ngollo, Hugo Bottois, Stéphane Nancey, Benjamin Pariente, Anthony Buisson, Xavier Treton, Mathurin Fumery, Madeleine Bezault, Philippe Seksik, Lionel Le Bourhis,REMIND Study Group Investigators , Jean-François Flejou, Matthieu Allez",
+                             author="Nassim Hammoudi, Dominique Cazals-Hatem, Claire Auzolle, Charlotte Gardair, Marjolaine Ngollo, Hugo Bottois, Stéphane Nancey, Benjamin Pariente, Anthony Buisson, Xavier Treton, Mathurin Fumery, Madeleine Bezault, Philippe Seksik, Lionel Le Bourhis, REMIND Study Group Investigators , Jean-François Flejou, Matthieu Allez",
                              publication_date='2020-01-18',
                              profile = hugo_profile)
 
@@ -186,7 +186,7 @@ def seed():
   Publication.objects.create(title = "Crohn's Disease Mucosal Transcriptomes Highlight JAK/STAT Pathway Involvement in Postoperative Recurrence",
                              journal_name="Journal for ImmunoTherapy of cancer",
                              publication_link="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3439555",
-                             author="Ngollo Marjolaine, Perez Kevin, Hammoudi Nassim, Gorelik Yuri, Delord Marc,Auzolle Claire, Bottois Hugo, Cazals-Hatem Dominique, Bezault Madeleine, Nancey Stéphane, Pariente Benjamin, Treton, Xavier, Fumery Mathurin, Anthony Buisson, Barnich Nicolas, Seksik Philippe, Investigators REMIND, Shen-Orr ShaiLe, Bourhis Lionel, Allez Matthieu",
+                             author="Ngollo Marjolaine, Perez Kevin, Hammoudi Nassim, Gorelik Yuri, Delord Marc, Auzolle Claire, Bottois Hugo, Cazals-Hatem Dominique, Bezault Madeleine, Nancey Stéphane, Pariente Benjamin, Treton, Xavier, Fumery Mathurin, Anthony Buisson, Barnich Nicolas, Seksik Philippe, Investigators REMIND, Shen-Orr ShaiLe, Bourhis Lionel, Allez Matthieu",
                              publication_date='2019-08-22',
                              profile = hugo_profile)
 
