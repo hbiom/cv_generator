@@ -25,13 +25,6 @@ def spotme(authors, me):
   return authors
 
 
-
-
-
-
-
-
-
 register.filter("spotme",spotme)
 
 import re

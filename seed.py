@@ -113,7 +113,7 @@ def seed():
   Capgemini = Experience.objects.create(
                                         job_name = "Project Learder",
                                         company = "Capgemini Enginners",
-                                        logo_company = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                                        logo_company = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628965171/n8jfbgljjyhird1szzyn.png",
                                         description =  Capgemini_text,
                                         start_date = '2019-09-02',
                                         end_date = '2021-09-02',
@@ -137,7 +137,7 @@ def seed():
   inserm = Experience.objects.create(
                                     job_name = "Science project leader, PhD candidate",
                                     company = "Paris Diderot/Hopital Saint Louis",
-                                    logo_company = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                                    logo_company = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628965190/b14buodzeezqwxbdh9xd.png",
                                     description =  inserm_text,
                                     start_date = '2015-09-02',
                                     end_date = '2019-04-03',
@@ -207,7 +207,7 @@ def seed():
   """
 
 
-  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966624/lewagon_tsnchh.png",
                        school_name = "Bootcamp",
                        title= "Computer programming Bootcamp",
                        description= lewagon,
@@ -229,7 +229,7 @@ def seed():
     - Deep learning
     """
 
-  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966624/blent_rdh8rg.jpg",
                          school_name = "Blent.ai",
                          title= "Data science Bootcamp",
                          description= blent,
@@ -238,7 +238,7 @@ def seed():
                          profile = hugo_profile )
 
 
-  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966624/paris7_logo_bit4fu.png",
                          school_name = "University Paris Diderot",
                          title= "PhD, Immunology/biotherapy",
                          description= "Thesis project: \"Acquisition and regulation of effector T cells function in Crohn's disease\"\n\n Written and defended in English",
@@ -247,7 +247,7 @@ def seed():
                          profile = hugo_profile )
 
 
-  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966624/paris7_logo_bit4fu.png",
                          school_name = "University Paris Diderot",
                          title= "Msc Science, Health and Application",
                          description= "Thesis project: \"Acquisition and regulation of effector T cells function in Crohn's disease\"\n\n Written and defended in English",
@@ -263,7 +263,7 @@ def seed():
   """
 
 
-  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966624/upmc_vhr9l1.png",
                          school_name = "University Paris Pierre and Marie Curie",
                          title= "University Diploma",
                          description= dugbm,
@@ -271,7 +271,7 @@ def seed():
                          link = "https://dugbm.sorbonne-universite.fr/",
                          profile = hugo_profile )
 
-  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+  Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966623/lehavre_logo_kx3liu.png",
                          school_name = "University Le Havre",
                          title= "Bachelor of biology",
                          description= "",
@@ -284,7 +284,7 @@ def seed():
 
 
   CTT = Portfolio.objects.create(project_title = "Medical images visualization with python",
-                           img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                           img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1628965520/mxikal01ilghvqrk4lmx.png",
                            description= 'Utilities for exploratory data analysis and visualization on nifti files (Colorectal cancer) with python',
                            link_medium="https://hugobottois.medium.com/medical-images-visualization-with-python-b40c2eb085f7",
                            link_github="https://github.com/hbiom/DataViz_CT_CCR",
@@ -302,10 +302,10 @@ def seed():
   """
 
   cursed = Portfolio.objects.create(project_title = "Doodle clone",
-                           img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1626531093/public/images/avatar2_g5nxgg.jpg",
+                           img="https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966143/doodles_iwjln1.png",
                            description= cursed,
-                           link_website="https://www.youtube.com/",
-                           link_github="https://github.com/hbiom/DataViz_CT_CCR",
+                           link_website="https://cursed-doodle.herokuapp.com",
+                           link_github="https://github.com/hbiom/cursed_doodles",
                            profile = hugo_profile
                            )
 

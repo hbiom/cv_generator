@@ -101,9 +101,9 @@ class Portfolio(models.Model):
   skills = models.ManyToManyField(Skill)
   project_title = models.CharField(max_length=250)
   description =  models.TextField(max_length=4000)
-  link_website = models.URLField(max_length=1500, null=True)
-  link_github = models.URLField(max_length=1500, null=True)
-  link_medium = models.URLField(max_length=1500, null=True)
+  link_website = models.URLField(max_length=1500, null=True, blank=True)
+  link_github = models.URLField(max_length=1500, null=True, blank=True)
+  link_medium = models.URLField(max_length=1500, null=True, blank=True)
 
   def __str__(self):
     return self.project_title

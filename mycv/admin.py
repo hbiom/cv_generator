@@ -11,3 +11,5 @@ admin.site.register(Publication)
 admin.site.register(Study)
 admin.site.register(Skillcategory)
 admin.site.register(Subcategory)
+admin.site.register(Portfolio)
+
