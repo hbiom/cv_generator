@@ -40,20 +40,30 @@
 
 // skills
 
+
 .technical_track {
   display: flex;
   justify-content:flex-start;
   align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+  // flex-wrap: wrap;
 }
 
 
-.technical_track span {
+.technical_track .categorie {
   color: blue;
   font-weight: bold;
-  padding-right: 20px;
   font-size: 20px;
+  width: 200px;
+  text-align:center;
+  padding-right: 20px;
+}
+
+
+
+.skills {
+  display:flex;
+  flex-wrap: wrap;
+  width: 80%;
 }
 
 .skill {
@@ -79,10 +89,6 @@
   margin: 8px 8px 0px 0px;
 }
 
-.skills {
-  display:flex;
-  flex-wrap: wrap;
-}
 
 
 /*portfolio animation */
