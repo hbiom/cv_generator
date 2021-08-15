@@ -83,3 +83,9 @@ You can of course change design and CSS to further personalize your profile.
 
 The project layout for Django, SASS and React used is describe [Here](https://www.trell.se/blog/recommended-django-react-sass-project-layout/)
 
+
+## Conclusion
+
+Thanks for reading !
+
+Feedback are welcome and will be appreciated.
