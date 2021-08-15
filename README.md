@@ -1,10 +1,12 @@
 
 # CV website generator
 
+![caption](https://github.com/hbiom/)
+
 
 Django application to create your own profile to share your skills, experiences and portfolio.
 
-Technologies : Django, HTML, CSS, SCSS, JS, Cloudinary, Heroku
+**Technologies :** Django, HTML, CSS, SCSS, JS, Cloudinary, Heroku
 
 Deploy on heroku [Here](https://cvmyprofile.herokuapp.com/profil/HugoBottois)
 
