@@ -130,10 +130,15 @@
   .list > sublist {
     display: block;
   }
-}
 
-@media (max-width: 600px){
+  #publication {
+    width: 85%;
+    margin: 0;
+  }
+
   .cart-sub {
     flex-wrap: wrap;
   }
+
 }
+

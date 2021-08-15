@@ -207,8 +207,8 @@ def seed():
 
 
   Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966624/lewagon_tsnchh.png",
-                       school_name = "Bootcamp",
-                       title= "Computer programming Bootcamp",
+                       school_name = "Lewagon",
+                       title= "Computer programming",
                        description= lewagon,
                        obtention_date = '2019-04-02',
                        link = "https://www.lewagon.com/fr",
@@ -239,7 +239,7 @@ def seed():
 
   Study.objects.create(img = "https://res.cloudinary.com/dmeefs6iu/image/upload/v1628966624/paris7_logo_bit4fu.png",
                          school_name = "University Paris Diderot",
-                         title= "PhD, Immunology/biotherapy",
+                         title= "Thesis in Immunology/Biotherapy",
                          description= "Thesis project: \"Acquisition and regulation of effector T cells function in Crohn's disease\"\n\n Written and defended in English",
                          obtention_date = '2019-04-02',
                          link = "https://www.lewagon.com/fr",
@@ -293,9 +293,7 @@ def seed():
   CTT.skills.add(Python, Matplotlib, Numpy, Nibabel)
 
   cv_generator = """
-    Django application
-    <br><br>
-    You can create your own profile to share your skills, experiences and achivement.
+    Django application to create your own profile to share your skills, experiences and portfolio.
   """
 
   cv_generator_website = Portfolio.objects.create(project_title = "CV generator website",
