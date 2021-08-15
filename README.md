@@ -1,7 +1,7 @@
 
 # CV website generator
 
-![caption](https://github.com/hbiom/cv_generator/demo_web.gif)
+![caption](https://github.com/hbiom/cv_generator/blob/main/demo_web.gif)
 
 
 Django application to create your own profile to share your skills, experiences and portfolio.
