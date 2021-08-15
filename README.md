@@ -70,7 +70,8 @@ You need to keep your API crendential secret using **.env** and dotenv zero-depe
 
 ### URL
 
-Your website URL will be like "https://<site_name>.herokuapp.com/profil/<Fisrt_name><Last_name>"
+Your website URL will be like ```https://<site_name>.herokuapp.com/profil/<Fisrt_name><Last_name>```
+
 
 
 ## Customization
