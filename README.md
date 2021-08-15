@@ -73,20 +73,16 @@ You need to keep your API crendential secret using **.env** and dotenv zero-depe
 Your website URL will be like ```https://<site_name>.herokuapp.com/profil/<Fisrt_name><Last_name>```
 
 
-
-## Customization
+## Conclusion
 
 You can of course change design and CSS to further personalize your profile.
-
-
-## Initial Django, React and SASS setup
-
-
-The project layout for Django, SASS and React used is describe [Here](https://www.trell.se/blog/recommended-django-react-sass-project-layout/)
-
-
-## Conclusion
 
 Thanks for reading !
 
 Feedback are welcome and will be appreciated.
+
+
+
+## Initial Django, React and SASS setup
+
+The project layout for Django, SASS and React used is describe [Here](https://www.trell.se/blog/recommended-django-react-sass-project-layout/)
