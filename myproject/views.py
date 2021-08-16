@@ -5,14 +5,14 @@ import re
 
 
 
-def profil(request,full_name):
-
-  first_name, last_name =  re.findall('.[^A-Z]*', full_name)
+def profil(request):
 
   try:
-      profile = Profile.objects.get(first_name=first_name, last_name=last_name)
+    profile = Profile.objects.exists()
   except Profile.DoesNotExist:
-      return None
+    return render(request, 'profile.html')
+
+  profile = Profile.objects.all().first()
 
   experiences = Experience.objects.filter(profile=profile)
   publications = Publication.objects.filter(profile=profile)

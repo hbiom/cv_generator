@@ -6,12 +6,18 @@ import cloudinary
 from cloudinary.models import CloudinaryField
 
 class Profile(models.Model):
-  # user = models.OneToOneField(User, on_delete=models.CASCADE)
   first_name = models.CharField(max_length=80)
   last_name = models.CharField(max_length=80)
   title = models.CharField(max_length=200)
   profile_pic = cloudinary.models.CloudinaryField('image')
   about_me =  models.TextField(max_length=4000)
+
+  # Overwrite save method so there can only have one Profile instance
+  def save(self, *args, **kwargs):
+    if not self.pk and Profile.objects.exists():
+    # if one profile object exist, it will raised the error below
+        raise ValidationError('There is can be only one profile instance')
+    return super(Profile, self).save(*args, **kwargs)
 
   def full_name(self):
     ''' return full name of profile user'''

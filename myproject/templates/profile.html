@@ -5,17 +5,19 @@
 {% load custom_tags %}
 
   <div class = "font-page invisible">
-    <div>
-      <div class = div-avatar>
-        <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
-        <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
-        {% include "_network.html" with networks=networks %}
+    {% if profile %}
+      <div>
+        <div class = div-avatar>
+          <img src="{{profile.profile_pic.url}}" alt="{{profile.first_name}} {{profile.last_name}}" class = "avatar">
+          <h1> {{profile.first_name}} {{profile.last_name}}, {{profile.title}}</h1>
+          {% include "_network.html" with networks=networks %}
+        </div>
+        <div class= "div-text" >
+          <p> ABOUT <span> ME </span></p>
+          <p class = "text-center"> {{profile.about_me|linebreaks}} </p>
+        </div>
       </div>
-      <div class= "div-text" >
-        <p> ABOUT <span> ME </span></p>
-        <p class = "text-center"> {{profile.about_me|linebreaks}} </p>
-      </div>
-    </div>
+    {% endif %}
   </div>
 
   <div class="list" id="experience">
