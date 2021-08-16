@@ -55,15 +55,15 @@ python manage.py changepassword <user_name>
 Then, you can add data through the admin page :
 
 
-- First create your profile with your first name, last name, title, your profile type and a little text about you (only one profile is possible)
+- First create your profile with your first name, last name, title, your **Profile** type and a little text about you (only one profile is possible)
 
-- Create your skills. Each skills can be affected by a category and a subcategory (only skills with core_skill = True will be display in skill session).
+- Create your **Skill**. Each skills can be affected by a **Category** and a **Subcategory** (only skills with core_skill = True will be display in skill session).
 
-- Create your diploma, portfolio, experiences and publication (both portfolio and experience can be affected with specific skills under technical track session).
+- Create your **Study**, **Portfolio**, **Experiences** and **Publication** (both portfolio and experience can be affected with specific skills under technical track session).
 
-- you can add a link for your website, github repository and medium article to each portfolio project.
+- you can add a link for your website, github repository and medium article to each **Portfolio Project**.
 
-- Network include medium, linkdin and github profile and will be display in the website footer and in the profile presentation session under your name
+- **Network** include medium, linkdin and github profile and will be display in the website footer and in the profile presentation session under your name
 
 
 ## Deployment
