@@ -8,10 +8,12 @@ Django application to create your own profile to share your skills, experiences 
 
 **Technologies :** Django, HTML, CSS, SCSS, JS, Cloudinary, Heroku
 
-Deploy on heroku [Here](https://cvmyprofile.herokuapp.com/profil/HugoBottois)
+Deploy on heroku [Here](https://cvmyprofile.herokuapp.com/)
 
 
 ## Set up
+
+You need to install **Python/Conda** and **Node** for this project.
 
 
 You can clone/fork the repo and add your profile through the admin page with a superuser.
