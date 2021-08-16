@@ -11,10 +11,32 @@ Django application to create your own profile to share your skills, experiences 
 Deploy on heroku [Here](https://cvmyprofile.herokuapp.com/profil/HugoBottois)
 
 
-## Utilization
+## Set up
 
 
 You can clone/fork the repo and add your profile through the admin page with a superuser.
+
+Create a conda environment with requirements.txt and activate it.
+
+Set the migration with
+
+```
+python manage.py makemigrations
+```
+
+```
+python manage.py migrate
+```
+
+Create node-module from package with
+
+```
+npm install
+```
+
+
+## Utilization
+
 
 Create a superuser with the command below with a name, email and a password.
 
@@ -31,7 +53,7 @@ python manage.py changepassword <user_name>
 Then, you can add data through the admin page :
 
 
-- First create your profile with your first name, last name, title, your profile type and a little text about you.
+- First create your profile with your first name, last name, title, your profile type and a little text about you (only one profile is possible)
 
 - Create your skills. Each skills can be affected by a category and a subcategory (only skills with core_skill = True will be display in skill session).
 
@@ -66,11 +88,13 @@ cloudinary.config(
 )
 ```
 
-You need to keep your API crendential secret using **.env** and dotenv zero-dependency module.
+You also need to provide DATABASE_URL like below :
 
-### URL
+```
+DATABASE_URL=sqlite:///db.sqlite3
+```
 
-Your website URL will be like ```https://<site_name>.herokuapp.com/profil/<Fisrt_name><Last_name>```
+You need to keep all your API crendential secret including yout SECRET_KEY using **.env** and dotenv zero-dependency module.
 
 
 ## Conclusion
