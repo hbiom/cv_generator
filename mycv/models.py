@@ -91,6 +91,7 @@ NETWORK = (
   ("twitter", "twitter"),
   ("github", "github"),
   ("medium", "medium"),
+  ("website", "website"),
 )
 
 class Network(models.Model):
@@ -107,9 +108,6 @@ class Portfolio(models.Model):
   skills = models.ManyToManyField(Skill)
   project_title = models.CharField(max_length=250)
   description =  models.TextField(max_length=4000)
-  # link_website = models.URLField(max_length=1500, null=True, blank=True)
-  # link_github = models.URLField(max_length=1500, null=True, blank=True)
-  # link_medium = models.URLField(max_length=1500, null=True, blank=True)
 
   def get_project_links(self):
     return Portfoliolink.objects.filter(portfolio_id=self.pk)

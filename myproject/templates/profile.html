@@ -110,15 +110,15 @@
               </div>
             </div>
             <div class="project_links">
-              {% if project.link_website %}
-                <a href="{{project.link_website}}" class="link_website">Website</a>
-              {% endif %}
-              {% if project.link_github %}
-              <a href="{{project.link_github}}" class="link_github">Github</a>
-              {% endif %}
-              {% if project.link_medium %}
-              <a href="{{project.link_medium}}" class="link_medium">Medium</a>
-              {% endif %}
+              <ul>
+                {% for portfoliolink in project.get_project_links %}
+                  <li>
+                    <a href= {{portfoliolink.link}} target= "_blank">
+                      <i class="{{ portfoliolink.link_type|networkIcon }}"></i>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
             </div>
           </div>
         </div>
