@@ -39,10 +39,10 @@ def networkIcon(icon_name):
     "twitter":"fab fa-twitter-square",
     "github":"fab fa-github-square",
     "medium":"fab fa-medium",
+    "website":"fas fa-globe",
+    "article":"fas fa-newspaper",
   }
 
   return NETWORK_icon[icon_name]
 
 register.filter("networkIcon",networkIcon)
-
-
