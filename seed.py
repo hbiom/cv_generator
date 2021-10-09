@@ -193,15 +193,6 @@ def seed():
                              profile = hugo_profile)
 
 
-
-  Publication.objects.create(title = "Radiomics vs Deep Learning to predict lipomatous soft tissue tumors malignancy on Magnetic Resonance Imaging",
-                             journal_name="Experimental journal of radiology (under review)",
-                             publication_link="",
-                             author="",
-                             publication_date='2021-01-01',
-                             profile = hugo_profile)
-
-
   lewagon = """
   Attending Le Wagon Paris (Batch # 378):
   <br><br>
