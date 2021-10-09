@@ -107,9 +107,29 @@ class Portfolio(models.Model):
   skills = models.ManyToManyField(Skill)
   project_title = models.CharField(max_length=250)
   description =  models.TextField(max_length=4000)
-  link_website = models.URLField(max_length=1500, null=True, blank=True)
-  link_github = models.URLField(max_length=1500, null=True, blank=True)
-  link_medium = models.URLField(max_length=1500, null=True, blank=True)
+  # link_website = models.URLField(max_length=1500, null=True, blank=True)
+  # link_github = models.URLField(max_length=1500, null=True, blank=True)
+  # link_medium = models.URLField(max_length=1500, null=True, blank=True)
+
+  def get_project_links(self):
+    return Portfoliolink.objects.filter(portfolio_id=self.pk)
 
   def __str__(self):
     return self.project_title
+
+LINKS = (
+  ("linkedin", "linkedin"),
+  ("twitter", "twitter"),
+  ("github", "github"),
+  ("medium", "medium"),
+  ("website", "website"),
+  ("article", "article"),
+)
+
+class Portfoliolink(models.Model):
+  portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
+  link_type = models.CharField(max_length=100, choices=LINKS)
+  link = models.URLField(max_length=500, null=True)
+
+  def __str__(self):
+    return self.link_type
